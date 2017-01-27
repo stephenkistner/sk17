@@ -1,0 +1,69 @@
+//mixins
+
+//FONTFACE SHORTCUTS
+@mixin fontFace($family,$src,$style: normal,$weight: normal) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$src}.eot'); // IE9 compat
+		src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+			url('#{$src}.woff') format('woff'), // standards
+			url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+			url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
+
+
+//DYNAMIC FONT SIZES
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-font-size($fs-font-size);
+    }
+    @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
+}
+// Utility function for mixin font-size
+@mixin make-font-size($fs-font-size) {
+  // If $fs-font-size is a list, include
+  // both font-size and line-height
+  @if type-of($fs-font-size) == "list" {
+    font-size: nth($fs-font-size, 1);
+    @if (length($fs-font-size) > 1) {
+      line-height: nth($fs-font-size, 2);
+    }
+  }
+  @else {
+    font-size: $fs-font-size;
+  }
+}
+
+
+/// Breakpoints/tweakpoints manager
+/// @param {String} $point - Breakpoint/tweakpoint name
+@mixin respond-to($point) {
+  @if map-has-key($tweakpoints, $point) {
+    @media (min-width: map-get($tweakpoints, $point)) {
+      @content;
+    }
+  } @else if map-has-key($breakpoints, $point) {
+    @media (min-width: map-get($breakpoints, $point)) {
+      @content;
+    }
+  } @else {
+		@media (min-width: $point) {
+      @content;
+		}
+  }
+}

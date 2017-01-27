@@ -1,0 +1,40 @@
+nav.navigation {
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  padding: 1em 1em;
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  margin-left: -50%;
+  @include respond-to('1200px') {
+    width: 1200px;
+    margin-left: -600px;
+  }
+  a {
+    color: $white;
+  }
+  .logo {
+    pointer-events: all;
+    position: fixed;
+    float: left;
+    display: flex;
+    align-items: center;
+    img {
+      width: .9em;
+    }
+    small {
+      //margin-left: 1em;
+      //font-weight: bold;
+      font-family: $cooper;
+    }
+    border: none;
+  }
+  .contact {
+    pointer-events: all;
+    margin-left: auto;
+    float: right;
+  }
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <%= partial "partials/meta" %>
+  </head>
+
+  <body class="writing-list">
+    <%= partial "partials/nav" %>
+
+
+    <section class="intro">
+      <h1><%=current_page.data.title %></h1>
+      <!--<h5><%= current_page.data.description %></h5>-->
+    </section>
+
+
+    <% blog.articles.each do |article| %>
+      <article>
+
+        <!--<h2><a href="<%= article.url %>"><%= article.title %></a></h2>-->
+
+
+        <div class="meta">
+          <hr>
+          <p class="mono"><time><%= article.date.strftime('%b %e %Y') %></time></p>
+        </div>
+        <div class="content">
+          <%= article.body %>
+        </div>
+        <!--<a href="<%= article.url %>">Read more</a>-->
+      </article>
+    <% end %>
+
+
+
+    <%= partial "partials/footer" %>
+  </body>
+</html>

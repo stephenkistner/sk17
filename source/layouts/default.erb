@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <%= partial "partials/meta" %>
+  </head>
+
+  <body class="<%= page_classes %>">
+  <div class="for-cool-text">
+    <%= partial "partials/nav" %>
+    <%= yield %>
+    <%= partial "partials/footer" %>
+  </div>
+  </body>
+</html>

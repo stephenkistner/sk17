@@ -1,0 +1,312 @@
+@charset "utf-8";
+//$visual-grid: true;
+@import "neat";
+@import "normalize";
+@import 'mixins';
+@import "fonts";
+@import "vars";
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+::selection {
+  background: rgba($dark,.75);
+}
+
+body {
+  background: $white center center no-repeat fixed;
+  font-family: $work;
+  color: $dark;
+}
+
+.for-cool-text {
+  padding: 0;
+  margin: 0;
+  background-color: $white;
+}
+
+h1 {
+  font-family: $cooper;
+  @include font-size($h1-font-sizes);
+  text-align: center;
+}
+
+h2 {
+  font-family: $cooper;
+  @include font-size($h2-font-sizes);
+}
+
+h6 {
+  font-family: $usherwood;
+  @include font-size($h6-font-sizes);
+}
+
+p {
+  @include font-size($p-font-sizes);
+  font-family: $work;
+}
+
+p.emph {
+  font-family: $usherwood;
+  @include font-size($emph-font-sizes);
+}
+
+small {
+  font-family: $usherwood;
+  @include font-size($small-font-sizes);
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+a:after {
+  content: '';
+  background: image_url('funline.svg');
+  //background-color: black;
+  background-size: .4em .3em;
+  height: .3em;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: block;
+}
+
+section {
+  @include outer-container;
+  //@include pad(0 1em);
+  padding: 0 1em;
+}
+
+
+//----------------------
+//  IMPORT NAVIGATION STYLES
+//----------------------
+@import "components/navigation";
+//----------------------
+//  IMPORT FOOTER STYLES
+//----------------------
+@import "components/footer";
+
+
+.intro-bg {
+  width: 100%;
+  background-color: blue;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  min-height: 60vh;
+  margin-bottom: 5vh;
+  .casing {
+    flex: 0 0 100%;
+  }
+  h1, h2 {
+    @include span-columns(12);
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: .3em;
+  }
+  @include respond-to('medium') {
+    min-height: 80vh;
+    margin-bottom: 10vh;
+    h1, h2 {
+      @include span-columns(10);
+      @include shift(1);
+    }
+  }
+  @include respond-to('large') {
+    min-height: 100vh;
+    h1, h2 {
+      @include span-columns(8);
+      @include shift(2);
+    }
+  }
+}
+
+.about {
+  .main {
+    .profile {
+      @include span-columns(3);
+    }
+    .bio {
+      @include span-columns(8);
+      @include shift(1);
+      .likes, .dislikes {
+        @include span-columns(4 of 8);
+      }
+    }
+  }
+}
+
+.projects {
+  .content {
+    h2 {
+      margin-bottom: .5em;
+    }
+    h6 {
+      margin-bottom: 1.3em;
+      @include span-columns(12);
+    }
+    p.emph {
+      margin-top: .7em;
+      margin-bottom: 1em;
+    }
+    @include respond-to('small') {
+      h2, p, h6 {
+        @include span-columns(10);
+        @include shift(1);
+      }
+    }
+    @include respond-to('medium') {
+      h2 {
+        margin-bottom: 1em;
+        @include span-columns(8);
+      }
+      p {
+        @include span-columns(8);
+        @include shift(4);
+      }
+    }
+    @include respond-to('large') {
+      h2 {
+        @include span-columns(6);
+      }
+      p {
+        @include span-columns(6);
+        @include shift(4);
+      }
+    }
+  }
+}
+
+
+//############################################
+//#################COMPONENTS#################
+//############################################
+
+//brief component
+.brief {
+  margin-bottom: 5vh;
+  .role {
+    h6 {
+      margin-bottom: .3em;
+    }
+    p {
+      margin-bottom: 5vh;
+    }
+  }
+  .summary {
+    @include span-columns(12);
+    .list1, .list2 {
+      @include span-columns(6);
+      ul {
+        @extend small;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          display: inline;
+        }
+        li:before {
+          content: '\007e';
+          margin-right: .2em;
+        }
+      }
+    }
+    .list2 {
+      @include omega;
+    }
+    img {
+      @include span-columns(12);
+      margin-top: 5vh;
+    }
+  }
+  @include respond-to('small') {
+    margin-bottom: 10vh;
+    .summary {
+      img {
+        margin-top: 10vh;
+      }
+    }
+  }
+  @include respond-to('medium') {
+    .role {
+      @include span-columns(4);
+      padding-right: 1em;
+    }
+    .summary {
+      @include span-columns(8);
+      .list1, .list2 {
+        @include span-columns(6);
+        ul {
+          li {
+            display: inline-block;
+          }
+        }
+      }
+      .list2 {
+        @include omega;
+      }
+    }
+  }
+  @include respond-to('large') {
+    .role {
+      @include span-columns(3);
+    }
+    .summary {
+      @include span-columns(8);
+      @include shift(1);
+      .list1, .list2 {
+        @include span-columns(4 of 8);
+      }
+      .list2 {
+        @include omega;
+      }
+      img {
+        @include span-columns(8 of 8);
+      }
+    }
+  }
+}
+
+
+// DOUBLE A (image, 2up)
+.double-a {
+  @include span-columns(12);
+  margin: 8vh auto 10vh auto;
+  display: flex;
+  flex-flow: column;
+  .img-1, .img-2 {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .img-1 {
+    margin-bottom: 1em;
+  }
+  @include respond-to('small') {
+    //@include span-columns(10);
+    //@include shift(1);
+  }
+  @include respond-to('medium') {
+    //@include shift(0);
+    flex-flow: row;
+    align-items: flex-end;
+    .img-1 {
+      @include span-columns(6);
+      margin-bottom: 0;
+    }
+    .img-2 {
+      @include span-columns(4);
+      margin-left: auto;
+      margin-bottom: -15vh;
+    }
+  }
+}

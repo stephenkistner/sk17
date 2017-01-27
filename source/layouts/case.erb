@@ -1,0 +1,44 @@
+<% wrap_layout :default do %>
+
+
+<div class="intro-bg">
+  <section class="intro">
+    <div class="casing">
+      <h1><%=current_page.data.title %></h1>
+    </div>
+  </section>
+</div>
+
+
+<section class="brief">
+    <div class="role">
+      <h6>My Role:</h6>
+      <p class="emph">I designed & developed a weather app that shows you how it feels outside.</p>
+    </div>
+    <div class="summary">
+      <div class="list1">
+      <h6>Along the way I:</h6>
+        <ul>
+          <li>interfaced with live weather data</li>
+          <li>ran into problems with P5.js</li>
+          <li>published on the Chrome web store</li>
+        </ul>
+      </div>
+      <div class="list2">
+      <h6>Along the way I:</h6>
+        <ul>
+          <li>interfaced with live weather data</li>
+          <li>ran into problems with P5.js</li>
+          <li>published on the Chrome web store</li>
+        </ul>
+      </div>
+      <%= image_tag "test-th.jpg" %>
+    </div>
+</section>
+
+
+<div class="content">
+<%= yield %>
+</div>
+
+<% end %>
