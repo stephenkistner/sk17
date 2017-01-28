@@ -1,6 +1,19 @@
+.footer-bg {
+  background-color: $black;
+}
+
 footer {
+  $footer-link-sizes: (
+    null  : (20px, .97),
+    small : 22px,
+    medium: (25px),
+    large : (27px),
+  );
+  color: $white;
   @extend section;
-  margin: 20vh auto 5vh auto;
+  margin-top: 20vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   min-height: 30vh;
   .links {
     @include span-columns(12);
@@ -9,13 +22,18 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
-    margin: 0 0 2em 0;
+    margin: 1em 0 2em 0;
     padding: 0;
       li {
       display: inline-block;
       margin-bottom: 1.5em;
-      margin-right: 10%;
+      margin-right: 5%;
       flex: 0 0 40%;
+        a {
+          font-family: $cooper;
+          @include font-size($footer-link-sizes);
+          box-shadow: none;
+        }
       }
     }
   }
@@ -32,15 +50,17 @@ footer {
    display: none;
   }
   @include respond-to('medium') {
-    margin: 30vh auto 10vh auto;
+    margin-top: 30vh;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
     .links {
-        @include span-columns(2);
+        @include span-columns(3);
         ul {
           flex-direction: column;
         }
       }
     .about {
-        @include span-columns(9);
+        @include span-columns(6);
         @include shift(1);
       }
       .toplink {

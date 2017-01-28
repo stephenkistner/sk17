@@ -11,16 +11,18 @@ html {
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased !important;
+  height: 100vh; /* set viewport constraint */
+  min-height: 100%;
 }
 
 ::selection {
-  background: rgba($dark,.75);
+  background: rgba($accent,.75);
 }
 
 body {
   background: $white center center no-repeat fixed;
   font-family: $work;
-  color: $dark;
+  color: $black;
 }
 
 .for-cool-text {
@@ -41,8 +43,10 @@ h2 {
 }
 
 h6 {
-  font-family: $usherwood;
+  font-family: $work;
+  font-weight: bold;
   @include font-size($h6-font-sizes);
+  margin-bottom: .5em;
 }
 
 p {
@@ -61,20 +65,9 @@ small {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
-  position: relative;
-  display: inline-block;
-}
-a:after {
-  content: '';
-  background: image_url('funline.svg');
-  //background-color: black;
-  background-size: .4em .3em;
-  height: .3em;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  display: block;
+  box-shadow: inset 0 -1px 0 $white, inset 0 -2px 0 $black;
 }
 
 section {
@@ -96,7 +89,11 @@ section {
 
 .intro-bg {
   width: 100%;
-  background-color: blue;
+  background: no-repeat center center;
+  background-size: cover;
+  @include respond-to('large') {
+    background-attachment: fixed;
+  }
 }
 
 .intro {
@@ -125,8 +122,20 @@ section {
   @include respond-to('large') {
     min-height: 100vh;
     h1, h2 {
-      @include span-columns(8);
-      @include shift(2);
+      //@include span-columns(8);
+      //@include shift(2);
+    }
+  }
+}
+
+.index {
+  .opening-remarks {
+    text-align: center;
+  }
+  @include respond-to('medium') {
+    .opening-remarks {
+      @include span-columns(10);
+      @include shift(1);
     }
   }
 }
@@ -152,7 +161,7 @@ section {
       margin-bottom: .5em;
     }
     h6 {
-      margin-bottom: 1.3em;
+      margin-bottom: 1.5em;
       @include span-columns(12);
     }
     p.emph {
@@ -169,6 +178,10 @@ section {
       h2 {
         margin-bottom: 1em;
         @include span-columns(8);
+        @include shift(0);
+      }
+      h6 {
+        @include shift(0);
       }
       p {
         @include span-columns(8);
@@ -197,7 +210,7 @@ section {
   margin-bottom: 5vh;
   .role {
     h6 {
-      margin-bottom: .3em;
+      margin-bottom: 1em;
     }
     p {
       margin-bottom: 5vh;
@@ -243,6 +256,7 @@ section {
       padding-right: 1em;
     }
     .summary {
+      //margin-top: 20vh;
       @include span-columns(8);
       .list1, .list2 {
         @include span-columns(6);
