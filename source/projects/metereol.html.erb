@@ -1,0 +1,65 @@
+---
+layout: case
+title: 'Metereol: A Typographic Weather Visualizer'
+date: 01-01-2017
+
+theme_color: FFF700
+
+head1: How does the
+head2: weather feel?
+
+summary: Metereol is a weather visualizer. It generates a holistic representation of how it feels outside.
+
+role: I concepted, designed & developed Metereol in just 3 weeks.
+contents:
+  - constructed a visual language
+  - worked around the limitations of P5.js
+  - published on the Chrome web store
+learned:
+  - Test early (find out what works, etc)
+  - make compromises
+  - optimize code for performance...
+
+---
+
+
+<section>
+<style></style>
+<div class='embed-container big-video'><iframe src='https://player.vimeo.com/video/194844228?title=0&byline=0&portrait=0&autoplay=0&loop=1' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+
+
+<h5>The Challenge</h5>
+<h2>Temperature is a feeling, not a number.</h2>
+<p>Imagine a hot summer day in the city. A thick soup of stagnant air surrounds your body as you step outside. How does it feel? Pretty freaking uncomfortable. </p>
+<p>Now imagine a snowy December evening. It's picturesque, but the moment you step outside the cold is harsh and cutting. </p>
+
+<p class="emph">I wanted to evoke these same feelings through dynamic visual compositions.</p>
+
+<p>How it feels outside also hinges upon more than just temperature. A summer day with a breeze feels drastically different than one with no breeze and high humidity. I needed to develop a system that took all of these conditions into account.</p>
+
+
+
+
+<div class="images-2up-a">
+  <%= image_tag "snow.png", :class => "img-1" %>
+  <%= image_tag "thing.png", :class => "img-2" %>
+</div>
+
+<h5>The Approach</h5>
+<h2>Showing how it feels</h2>
+<p>Images and visual inputs have a much closer relationship to the visceral. Seeing an ad for the local pool on a hot summer day automatically incites sensations of ....</p>
+
+<p>Instead of just listing weather conditions, showing the data visually delivers a more meaningful.
+
+I decided to create a system of visualizations that create a holistic picture of the conditions outside. Like any good data visualization, each element would be </p>
+
+<div class="img-caption-L">
+  <%= image_tag "form.png"%>
+  <p class="caption"><b>Distributing a short survey</b> helped me determine which metrics people valued most.</p>
+</div>
+<div class="img-caption-R">
+  <%= image_tag "metrics.png"%>
+  <p class="caption">I settled on four key data points: temperature, humidity, precipitation and cloud cover. Together, these metrics reflect weather conditions without adding unnecessary complexity to the system. I later added time of day to make the generated compositions more dynamic.</p>
+</div>
+
+</section>

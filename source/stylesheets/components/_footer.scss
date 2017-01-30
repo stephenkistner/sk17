@@ -30,7 +30,8 @@ footer {
       margin-right: 5%;
       flex: 0 0 40%;
         a {
-          font-family: $cooper;
+          font-family: $work;
+          font-weight: bold;
           @include font-size($footer-link-sizes);
           box-shadow: none;
         }

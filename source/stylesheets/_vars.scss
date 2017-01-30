@@ -1,5 +1,5 @@
 //BRAND COLORS
-$black: #252422;
+$black: #242423;
 $white: #fff;
 $light: #f2f2f2;
 
@@ -9,8 +9,8 @@ $accent: #FE4E00;
 
 //BRAND FONTS
 $cooper: 'Cooper', "Cooper Black", serif;
-$usherwood: 'Usherwood', Times, "Times New Roman", serif;
-$work: 'Work Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$usherwood: 'Usherwood', Times, "Times New Roman", serif;
+$work: 'Libre Franklin', "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 //BREAKPOINTS
 $breakpoints: (
@@ -30,10 +30,17 @@ $h1-font-sizes: (
 );
 
 $h2-font-sizes: (
-  null  : (36px, .89),
+  null  : (36px, .95),
   small : (50px),
   medium: (60px),
   large : (72px),
+);
+
+$h5-font-sizes:  (
+  null  : (20px, 1.4),
+  small : 23px,
+  medium: (25px, 1.6),
+  large : (27px),
 );
 
 $h6-font-sizes: (

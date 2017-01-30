@@ -35,18 +35,25 @@ h1 {
   font-family: $cooper;
   @include font-size($h1-font-sizes);
   text-align: center;
+  letter-spacing: -.05em;
 }
 
 h2 {
   font-family: $cooper;
   @include font-size($h2-font-sizes);
+  letter-spacing: -.05em;
+}
+
+h5 {
+  font-family: $work;
+  @include font-size($h5-font-sizes);
 }
 
 h6 {
-  font-family: $work;
+  font-family: $cooper;
   font-weight: bold;
   @include font-size($h6-font-sizes);
-  margin-bottom: .5em;
+  margin-bottom: .2em;
 }
 
 p {
@@ -55,12 +62,13 @@ p {
 }
 
 p.emph {
-  font-family: $usherwood;
+  font-family: $work;
   @include font-size($emph-font-sizes);
+  font-weight: 300;
 }
 
 small {
-  font-family: $usherwood;
+  font-family: $work;
   @include font-size($small-font-sizes);
 }
 
@@ -91,9 +99,6 @@ section {
   width: 100%;
   background: no-repeat center center;
   background-size: cover;
-  @include respond-to('large') {
-    background-attachment: fixed;
-  }
 }
 
 .intro {
@@ -106,6 +111,7 @@ section {
   }
   h1, h2 {
     @include span-columns(12);
+    //color: $white;
   }
   h2 {
     text-align: center;
@@ -131,11 +137,19 @@ section {
 .index {
   .opening-remarks {
     text-align: center;
+    .emph {
+      margin-top: 0;
+      span {
+        font-family: $cooper;
+      }
+    }
   }
   @include respond-to('medium') {
     .opening-remarks {
-      @include span-columns(10);
-      @include shift(1);
+      p {
+        @include span-columns(10);
+        @include shift(1);
+      }
     }
   }
 }
@@ -160,27 +174,29 @@ section {
     h2 {
       margin-bottom: .5em;
     }
-    h6 {
+    h5 {
       margin-bottom: 1.5em;
       @include span-columns(12);
     }
     p.emph {
       margin-top: .7em;
-      margin-bottom: 1em;
+      margin-bottom: 1.5em;
+    }
+    img {
+      max-width: 100%;
     }
     @include respond-to('small') {
-      h2, p, h6 {
+      h2, p, h5 {
         @include span-columns(10);
         @include shift(1);
       }
     }
     @include respond-to('medium') {
       h2 {
-        margin-bottom: 1em;
-        @include span-columns(8);
+        @include span-columns(12);
         @include shift(0);
       }
-      h6 {
+      h5 {
         @include shift(0);
       }
       p {
@@ -191,15 +207,19 @@ section {
     @include respond-to('large') {
       h2 {
         @include span-columns(6);
+        //font-family: $work;
+        //@include shift(4);
+      }
+      h5 {
+        @include span-columns(4);
       }
       p {
-        @include span-columns(6);
+        @include span-columns(7);
         @include shift(4);
       }
     }
   }
 }
-
 
 //############################################
 //#################COMPONENTS#################
@@ -208,13 +228,12 @@ section {
 //brief component
 .brief {
   margin-bottom: 5vh;
+  .emph {
+    @include span-columns(12);
+    margin-bottom: 5vh;
+  }
   .role {
-    h6 {
-      margin-bottom: 1em;
-    }
-    p {
-      margin-bottom: 5vh;
-    }
+    margin-bottom: 3vh;
   }
   .summary {
     @include span-columns(12);
@@ -237,20 +256,26 @@ section {
     .list2 {
       @include omega;
     }
-    img {
+    .visual {
       @include span-columns(12);
       margin-top: 5vh;
+      img, iframe {
+        width: 100%;
+      }
     }
   }
   @include respond-to('small') {
     margin-bottom: 10vh;
     .summary {
-      img {
+      .visual {
         margin-top: 10vh;
       }
     }
   }
   @include respond-to('medium') {
+    .emph {
+      margin-bottom: 10vh;
+    }
     .role {
       @include span-columns(4);
       padding-right: 1em;
@@ -262,7 +287,7 @@ section {
         @include span-columns(6);
         ul {
           li {
-            display: inline-block;
+            display: block;
           }
         }
       }
@@ -273,18 +298,18 @@ section {
   }
   @include respond-to('large') {
     .role {
-      @include span-columns(3);
+      //@include span-columns(3);
     }
     .summary {
       @include span-columns(8);
-      @include shift(1);
+      //@include shift(1);
       .list1, .list2 {
         @include span-columns(4 of 8);
       }
       .list2 {
         @include omega;
       }
-      img {
+      .visual {
         @include span-columns(8 of 8);
       }
     }
@@ -292,8 +317,8 @@ section {
 }
 
 
-// DOUBLE A (image, 2up)
-.double-a {
+// (image, 2up)
+.images-2up-a {
   @include span-columns(12);
   margin: 8vh auto 10vh auto;
   display: flex;
@@ -312,7 +337,7 @@ section {
   @include respond-to('medium') {
     //@include shift(0);
     flex-flow: row;
-    align-items: flex-end;
+    align-items: flex-start;
     .img-1 {
       @include span-columns(6);
       margin-bottom: 0;
@@ -320,7 +345,60 @@ section {
     .img-2 {
       @include span-columns(4);
       margin-left: auto;
-      margin-bottom: -15vh;
+      padding-top: 15vh;
+    }
+  }
+}
+
+
+
+//video playback
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.big-video {
+  margin-bottom: 5vh;
+  @include respond-to('small') {
+    margin-bottom: 10vh;
+  }
+}
+
+
+//############  CAPTIONS  #################
+.img-caption-R, .img-caption-L {
+  @include span-columns(12);
+  margin-top: 10vh;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  img {
+    margin-bottom: 1em;
+  }
+  p.caption {
+    b {
+      font-family: $cooper;
+      font-weight: normal;
+    }
+  }
+  @include respond-to('medium') {
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      @include span-columns(7);
+    }
+    p.caption {
+      @include span-columns(4);
+      margin-left: auto;
+    }
+  }
+}
+
+.img-caption-L {
+  @include respond-to('medium') {
+    flex-flow: row-reverse;
+    p.caption {
+      margin-right: auto;
+      margin-left: 0;
     }
   }
 }
