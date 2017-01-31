@@ -16,35 +16,38 @@ footer {
   padding-bottom: 5vh;
   min-height: 30vh;
   .links {
-    @include span-columns(12);
-    ul {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 1em 0 2em 0;
-    padding: 0;
-      li {
-      display: inline-block;
-      margin-bottom: 1.5em;
-      margin-right: 5%;
-      flex: 0 0 40%;
-        a {
-          font-family: $work;
-          font-weight: bold;
-          @include font-size($footer-link-sizes);
-          box-shadow: none;
+    flex-direction: column;
+    .other {
+      a {
+        font-family: $cooper;
+        font-weight: bold;
+        @include font-size($footer-link-sizes);
+        box-shadow: none;
+      }
+      ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 1em 0 1em 0;
+      padding: 0;
+        li {
+        display: inline-block;
+        margin-bottom: 1.5em;
+        margin-right: 5%;
+        flex: 0 0 45%;
         }
       }
     }
-  }
-  .about {
-    @include span-columns(12);
-
+    .next {
+      //@include span-columns(12);
+      text-align: right;
+    }
   }
   .copy {
     @include span-columns(12);
-    margin-top: 5em;
+    margin-top: 1em;
   }
   .toplink {
    float: right;
@@ -55,25 +58,21 @@ footer {
     padding-top: 10vh;
     padding-bottom: 5vh;
     .links {
-        @include span-columns(3);
-        ul {
-          flex-direction: column;
+      flex-flow: row-reverse;
+      align-items: center;
+      .other {
+          ul {
+            flex-direction: column;
+          }
+          margin-right: auto;
         }
-      }
-    .about {
-        @include span-columns(6);
-        @include shift(1);
-      }
-      .toplink {
+      .next {
+        }
+    }
+    .toplink {
         display: inline;
-      }
+    }
     }
   @include respond-to('large'){
-    .about {
-      @include span-columns(8);
-    }
   }
-    .about, .copy, .include {
-      margin-right: 0;
-    }
 }

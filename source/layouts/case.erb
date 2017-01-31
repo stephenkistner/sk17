@@ -17,23 +17,10 @@
       <h6>My Role:</h6>
       <small><%=current_page.data.role %></small>
     </div>
-    <div class="summary">
-      <div class="list1">
-      <h6>Along the way I:</h6>
-        <ul>
-          <% current_page.data.contents.each do |f| %>
-          <li><%= f %></li>
-          <% end %>
-        </ul>
-      </div>
-      <div class="list2">
-      <h6>And I learned:</h6>
-        <ul>
-          <% current_page.data.learned.each do |f| %>
-          <li><%= f %></li>
-          <% end %>
-        </ul>
-      </div>
+    <div class="learned">
+      <h6>What I learned:</h6>
+  
+        <small> <%=current_page.data.learned %></small>
     </div>
 </section>
 

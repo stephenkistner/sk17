@@ -1,11 +1,14 @@
 ---
 title: Welcome!
 layout: default
+
+theme_color: 000
+
 ---
 
-<div class="intro-bg" style="background-color: #242423">
+<div class="intro-bg" style="background-color: #fff">
 <section class="intro">
-  <div class="casing">
+  <div class="casing" style="color: #<%=current_page.data.theme_color %>">
     <h2>This one's for you,</h2>
     <h1>Imaginary Studio.</h1>
   </div>
@@ -14,7 +17,7 @@ layout: default
 
 
 <section class="opening-remarks">
-    <p class="emph"><span>I'm Stephen</span>, a digital designer who likes to code, make things move and improve people's lives.</p>
+    <p class="emph">I'm Stephen, a digital designer who likes to code, make things move and improve people's lives.</p>
     <p>Here's what I can do for you:</p>
 
     <h2>Design for complex information systems</h2>

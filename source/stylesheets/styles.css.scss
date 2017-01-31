@@ -106,6 +106,7 @@ section {
   align-items: center;
   min-height: 60vh;
   margin-bottom: 5vh;
+  text-align: center;
   .casing {
     flex: 0 0 100%;
   }
@@ -114,7 +115,7 @@ section {
     //color: $white;
   }
   h2 {
-    text-align: center;
+    text-align: leeft;
     margin-bottom: .3em;
   }
   @include respond-to('medium') {
@@ -135,8 +136,12 @@ section {
 }
 
 .index {
+  .intro {
+    min-height: 50vh;
+    padding-top: 20vh;
+  }
   .opening-remarks {
-    text-align: center;
+    text-align: left;
     .emph {
       margin-top: 0;
       span {
@@ -147,8 +152,8 @@ section {
   @include respond-to('medium') {
     .opening-remarks {
       p {
-        @include span-columns(10);
-        @include shift(1);
+        //@include span-columns(10);
+        //@include shift(1);
       }
     }
   }
@@ -193,14 +198,15 @@ section {
     }
     @include respond-to('medium') {
       h2 {
-        @include span-columns(12);
-        @include shift(0);
+        @include span-columns(7);
+        //@include shift(4);
       }
       h5 {
+        @include span-columns(3);
         @include shift(0);
       }
       p {
-        @include span-columns(8);
+        @include span-columns(7);
         @include shift(4);
       }
     }
@@ -208,7 +214,7 @@ section {
       h2 {
         @include span-columns(6);
         //font-family: $work;
-        //@include shift(4);
+        @include shift(0);
       }
       h5 {
         @include span-columns(4);
@@ -228,6 +234,9 @@ section {
 //brief component
 .brief {
   margin-bottom: 5vh;
+  small {
+    font-family: $work;
+  }
   .emph {
     @include span-columns(12);
     margin-bottom: 5vh;
@@ -235,32 +244,19 @@ section {
   .role {
     margin-bottom: 3vh;
   }
-  .summary {
+  .learned {
     @include span-columns(12);
-    .list1, .list2 {
-      @include span-columns(6);
-      ul {
-        @extend small;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        li {
-          display: inline;
-        }
-        li:before {
-          content: '\007e';
-          margin-right: .2em;
-        }
+    ul {
+      @extend small;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        display: inline;
       }
-    }
-    .list2 {
-      @include omega;
-    }
-    .visual {
-      @include span-columns(12);
-      margin-top: 5vh;
-      img, iframe {
-        width: 100%;
+      li:before {
+        content: '\007e';
+        margin-right: .2em;
       }
     }
   }
@@ -277,41 +273,26 @@ section {
       margin-bottom: 10vh;
     }
     .role {
-      @include span-columns(4);
+      @include span-columns(6);
       padding-right: 1em;
     }
-    .summary {
-      //margin-top: 20vh;
-      @include span-columns(8);
-      .list1, .list2 {
-        @include span-columns(6);
+    .learned {
+      @include span-columns(5);
+      @include shift(1);
         ul {
           li {
             display: block;
           }
         }
-      }
-      .list2 {
-        @include omega;
-      }
     }
   }
   @include respond-to('large') {
     .role {
       //@include span-columns(3);
     }
-    .summary {
-      @include span-columns(8);
-      //@include shift(1);
-      .list1, .list2 {
-        @include span-columns(4 of 8);
-      }
-      .list2 {
-        @include omega;
-      }
-      .visual {
-        @include span-columns(8 of 8);
-      }
+    .learned {
+      @include span-columns(4);
+      @include shift(2);
     }
   }
 }
@@ -365,8 +346,10 @@ section {
 
 //############  CAPTIONS  #################
 .img-caption-R, .img-caption-L {
-  @include span-columns(12);
+  @include span-columns(10);
+  @include shift(1);
   margin-top: 10vh;
+  margin-bottom: 5vh;
   display: flex;
   flex-flow: column;
   align-items: flex-start;
@@ -388,16 +371,32 @@ section {
     }
     p.caption {
       @include span-columns(4);
-      margin-left: auto;
     }
+  }
+  @include respond-to('large') {
+    img {
+      @include span-columns(6);
+    }
+    p.caption {
+      @include span-columns(5);
+    }
+  }
+}
+
+.img-caption-R {
+  p.caption {
+    margin-left: 0;
   }
 }
 
 .img-caption-L {
   @include respond-to('medium') {
     flex-flow: row-reverse;
+    img {
+      margin-right: 0;
+    }
     p.caption {
-      margin-right: auto;
+      //margin-right: auto;
       margin-left: 0;
     }
   }

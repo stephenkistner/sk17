@@ -1,24 +1,20 @@
 ---
 layout: case
+
+order: 1
 title: 'Metereol: A Typographic Weather Visualizer'
 date: 01-01-2017
 
-theme_color: FFF700
+theme_color: 000
 
-head1: How does the
-head2: weather feel?
+head1: How does
+head2: the weather feel?
 
 summary: Metereol is a weather visualizer. It generates a holistic representation of how it feels outside.
 
-role: I concepted, designed & developed Metereol in just 3 weeks.
-contents:
-  - constructed a visual language
-  - worked around the limitations of P5.js
-  - published on the Chrome web store
-learned:
-  - Test early (find out what works, etc)
-  - make compromises
-  - optimize code for performance...
+role: 'I concepted, designed & developed Metereol in just 3 weeks. I developed a visual system to represent weather data, worked around the limitations of P5.js to build a functional prototype, and published the app on the Chrome web store.'
+
+learned: optimize code for performance...
 
 ---
 
@@ -53,13 +49,16 @@ learned:
 
 I decided to create a system of visualizations that create a holistic picture of the conditions outside. Like any good data visualization, each element would be </p>
 
+
+
 <div class="img-caption-L">
   <%= image_tag "form.png"%>
   <p class="caption"><b>Distributing a short survey</b> helped me determine which metrics people valued most.</p>
 </div>
-<div class="img-caption-R">
-  <%= image_tag "metrics.png"%>
-  <p class="caption">I settled on four key data points: temperature, humidity, precipitation and cloud cover. Together, these metrics reflect weather conditions without adding unnecessary complexity to the system. I later added time of day to make the generated compositions more dynamic.</p>
-</div>
+
+<p><%= image_tag "metrics2.png"%></p>
+
+<p class="caption">I settled on four key data points: <b>temperature, humidity, precipitation and cloud cover</b>. Together, these metrics reflect weather conditions without adding unnecessary complexity to the system. I later added time of day to make the generated compositions more dynamic.</p>
+
 
 </section>
