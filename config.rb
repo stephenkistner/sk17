@@ -50,8 +50,8 @@ activate :directory_indexes
 activate :blog do |blog|
   blog.name = "projects"
   blog.prefix = "projects"
-  blog.permalink = '{slug}.html'
-  blog.sources = '{slug}.html'
+  blog.permalink = '{namey}.html'
+  blog.sources = '{namey}.html'
 end
 
 activate :blog do |blog|

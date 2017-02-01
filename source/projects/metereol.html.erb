@@ -2,19 +2,16 @@
 layout: case
 
 order: 1
-title: 'Metereol: A Typographic Weather Visualizer'
+title: "Metereol: A Typographic Weather Visualizer"
 date: 01-01-2017
 
 theme_color: 000
 
 head1: How does the
 head2: '<span style="letter-spacing: -.05em">w</span>eather feel?'
-
-summary: Metereol is a weather visualizer. It generates a holistic representation of how it feels outside.
-
-role: 'I concepted, designed & developed Metereol in just 3 weeks. I developed a visual system to represent weather data, worked around the limitations of P5.js to build a functional prototype, and published the app on the Chrome web store.'
-
-learned: optimize code for performance...
+summary: "Metereol is a weather visualizer. It generates a holistic representation of how it feels outside."
+role: "I concepted, designed & built Metereol in just 3 weeks. I constructed a visual system that represents weather data, worked around the limitations of P5.js to build a functional prototype, and published the app on the Chrome web store."
+learned: "Setbacks are inevitable. Determining which problems to solve and which to work around is essential to developing a solid product."
 
 ---
 
@@ -34,50 +31,92 @@ learned: optimize code for performance...
 
 
 
-<div class="image-btn">
+<div class="images-btn">
+  <%= image_tag "test.png", :class => "img-1" %>
+  <%= image_tag "test.png", :class => "img-2" %>
   <a class="btn" href="#">See it Live!</a>
 </div>
 
 
 <h5>The Challenge</h5>
 <h2>Temperature is a feeling, not a number.</h2>
-<p>Imagine a hot summer day in the city. A thick soup of stagnant air surrounds your body as you step outside. How does it feel? Pretty freaking uncomfortable. </p>
-<p>Now imagine a snowy December evening. It's picturesque, but the moment you step outside the cold is harsh and cutting. </p>
+<p>Imagine a hot summer day in the city. A thick soup of stagnant air surrounds your body as you step outside. How does it feel? Pretty freaking uncomfortable.</p>
+<p>We measure weather with a series of numbers and percentages, but we experience it much like the above situation. Above all else, we feel them.</p>
 
-<p class="emph">I wanted to evoke these same feelings through dynamic visual compositions.</p>
+<p class="emph">I wanted to evoke these sensations through dynamic visual compositions.</p>
 
-<p>How it feels outside also hinges upon more than just temperature. A summer day with a breeze feels drastically different than one with no breeze and high humidity. I needed to develop a system that took all of these conditions into account.</p>
+<p>How it feels outside also depends on more than just temperature. A summer day with a breeze feels drastically different than one with no breeze and high humidity. To accurately describe how it felt, I needed to take all of these factors into account.</p>
 
 
 
 
 <div class="images-2up-a">
-  <%= image_tag "snow.png", :class => "img-1" %>
-  <%= image_tag "thing.png", :class => "img-2" %>
+  <%= image_tag "test.png", :class => "img-1" %>
+  <%= image_tag "test.png", :class => "img-2" %>
 </div>
+</section>
+
+<section>
 
 <h5>The Approach</h5>
-<h2>Showing how it feels</h2>
-<p>Images and visual inputs have a much closer relationship to the visceral. Seeing an ad for the local pool on a hot summer day automatically incites sensations of ....</p>
+<h2>Complex Feelings, Simple Language</h2>
+<p>How we sense the weather is a complex, multi-sensory event. The feel of hot air against the skin. The sight of storm clouds looming on the horizon. How can such abstract ideas be communicated visually?</p>
 
-<p>Instead of just listing weather conditions, showing the data visually delivers a more meaningful.
+<p class="emph">The system needed to be relatable. It needed structure.</p>
 
-I decided to create a system of visualizations that create a holistic picture of the conditions outside. Like any good data visualization, each element would be </p>
+<p>I wanted to make something that operated as both a functional tool and a visual experience. To be useful, the system needed structure. It needed a language. By using each data point like a word in a sentence, I could convey complex weather conditions through just a few components.</p>
+
+<%= image_tag "metrics2.png"%>
 
 
+  <p>I settled on four key data points: <b>temperature</b>, <b>humidity</b>, <b>precipitation</b> and <b>cloud cover</b>. Together, these metrics reflected most weather conditions without adding unnecessary complexity to the system. I later added time of day to make the compositions more dynamic.</p>
+</section>
 
-<div class="img-caption-L">
-  <%= image_tag "form.png"%>
-  <p class="caption"><b>Distributing a short survey</b> helped me determine which metrics people valued most.</p>
+<section>
+<h5>The Process</h5>
+<h2>Equal parts big and small</h2>
+<p>Each metric needed its own symbolic representation. But, like a sentence, the entire composition needed to convey more meaning than just its parts.</p>
+
+<p class="emph">Thinking about how each part related to the whole was essential.</p>
+
+<p>I structured my workflow around this principle. From sketching to prototyping, each element needed to be viewed in the context of the system. Often, a color or shape would take on an entirely different meaning when viewed with the rest of the components.</p>
+
+<div class="img-caption-R">
+  <%= image_tag "sketches.jpg"%>
+  <p class="caption"><b>Rough, gestural sketches</b> helped express how different atmospheric conditions felt. From these, I developed more refined drawings to flesh out the visual style.</p>
 </div>
 
 <div class="img-caption-R">
-  <%= image_tag "metrics.png"%>
-  <p class="caption"><b>I settled on four key data points:</b> temperature, humidity, precipitation and cloud cover. Together, these metrics reflect weather conditions without adding unnecessary complexity to the system. I later added time of day to make the generated compositions more dynamic.</p>
+  <%= image_tag "illy.jpg"%>
+  <p class="caption"><b>Moving directly to Illustrator</b> let me explore and relate different colors and forms. I could rapidly combine elements and look at the system as a whole as I developed its parts. Working with vectors also enabled me to think about how each part would translate into code.</p>
 </div>
 
-<h5>The Approach</h5>
-<h2>Showing how it feels</h2>
-<p>Images and visual inputs have a much closer relationship to the visceral. Seeing an ad for the local pool on a hot summer day automatically incites sensations of ....</p>
+<div class="img-caption-L">
+  <%= image_tag "processing2.png"%>
+  <p class="caption"><b>Using Processing</b>, I started outlining the system's motion. Ultimately the project would live online, but I was most familiar with Processing, and it let me prototype quickly.</p>
+</div>
+
+<div class="img-caption-R">
+  <%= image_tag "type.png"%>
+  <p class="caption"><b>The Typography</b><br>
+I chose Calibre Black as the system’s typeface. Its simple geometric forms put the focus on the visuals. The letterform's small counters and high legibility allowed them to act as containers for the visuals without sacrificing readability.</p>
+</div>
+
+<div class="img-caption-L">
+  <%= image_tag "form.png"%>
+  <p class="caption"><b>P5.js</b><br>
+When the time came to start building the final system, I chose to use P5.js. At the time, my understanding of Javascript was limited. Processing made more sense to me. Most of the code I wrote in Processing translated effortlessly into P5's syntax. But any framework comes with limitations...</p>
+</div>
+</section>
+
+<div class="dark-bg">
+<section class="problem">
+
+  <h2>Everything fell apart</h2>
+  <p class="emph lead">...when I masked the wave inside the type.</p>
+
+  <p>On its own, the temperature wave moved as intended. But when I combined it with the typography, the app would lock up and crash. Using the console, I discovered that the frame rate would plummet as soon as the program launched.</p>
+  <p>I knew it was a problem with how the text and wave were combined. Documentation of P5 was sparse online, especially regarding image masks. After hours of digging, I found a solution, and had to change how I layered the visuals.</p>
 
 </section>
+</div>
