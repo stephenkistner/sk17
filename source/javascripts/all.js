@@ -9,6 +9,23 @@ function resetBG() {
 
 $(document).ready(function($){
 
+  var isChromium = window.chrome,
+    winNav = window.navigator,
+    vendorName = winNav.vendor,
+    isOpera = winNav.userAgent.indexOf("OPR") > -1,
+    isIEedge = winNav.userAgent.indexOf("Edge") > -1,
+    isIOSChrome = winNav.userAgent.match("CriOS");
+    embed = $(".embed-container");
+
+    if(isIOSChrome){
+   // is Google Chrome on IOS
+} else if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false) {
+   // is Google Chrome
+   embed.css({"filter": "brightness(105%)"});
+} else {
+   // not Google Chrome
+}
+
 //  FADE IN TOP
 var fader = $("#content-fade");
 var projHead = $(".intro")

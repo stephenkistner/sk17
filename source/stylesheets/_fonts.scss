@@ -1,4 +1,8 @@
-@include fontFace('Cooper','/fonts/CooperBlackStd',normal,normal);
+@include fontFace('Cooper','/fonts/CooperBlack',normal,normal);
 
-@include fontFace('Usherwood','/fonts/UsherwoodStd-Book',normal,normal);
-@include fontFace('Usherwood','/fonts/UsherwoodStd-Bold',normal,bold);
+@media screen and (-webkit-min-device-pixel-ratio:0) {@font-face {font-family: 'Cooper';
+src: url('/fonts/CooperBlack.svg') format('svg');
+}}
+
+//@include fontFace('Usherwood','/fonts/UsherwoodStd-Book',normal,normal);
+//@include fontFace('Usherwood','/fonts/UsherwoodStd-Bold',normal,bold);

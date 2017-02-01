@@ -3,7 +3,7 @@ $black: #242423;
 $white: #fff;
 $light: #f2f2f2;
 
-$accent: #FE4E00;
+$accent: #F5CB5C;
 
 
 
@@ -23,7 +23,7 @@ $tweakpoints: ();
 
 //TYPE PROPORTIONS
 $h1-font-sizes: (
-  null  : (50px, .97),
+  null  : (50px, 1.1),
   small : 80px,
   medium: (120px),
   large : (144px),
@@ -34,6 +34,13 @@ $h2-font-sizes: (
   small : (50px),
   medium: (60px),
   large : (72px),
+);
+
+$h3-font-sizes: (
+  null  : (28px, 1),
+  small : (30px),
+  medium: (35px),
+  large : (40px),
 );
 
 $h5-font-sizes:  (

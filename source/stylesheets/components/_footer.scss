@@ -1,8 +1,38 @@
 .footer-bg {
   background-color: $black;
+  position: relative;
+  z-index: 1;
 }
 
 footer {
+  a {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    box-shadow: none;
+    transition: all .35s .25s ease-in-out;
+  }
+
+  a::after {
+    content: '';
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width: 0;
+    left: 0;
+    height: 25%;
+    background: $accent;
+    transition:width 0.25s ease-in;
+    //z-index: -1;
+  }
+
+  a:hover {
+    //color: $accent;
+  }
+
+  a:hover::after {
+    width: 100%;
+  }
   $footer-link-sizes: (
     null  : (20px, .97),
     small : 22px,
