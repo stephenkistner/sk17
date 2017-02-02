@@ -37,10 +37,10 @@ $h2-font-sizes: (
 );
 
 $h3-font-sizes: (
-  null  : (28px, 1),
-  small : (30px),
-  medium: (35px),
-  large : (40px),
+  null  : (36px, 1),
+  small : (40px),
+  medium: (48px),
+  large : (54px),
 );
 
 $h5-font-sizes:  (
@@ -50,19 +50,13 @@ $h5-font-sizes:  (
   large : (27px),
 );
 
-$h6-font-sizes: (
-  null  : (12px, 1.4),
-  small : 14px,
-  medium: (15px, 1.6),
-  large : (16px),
-);
-
 $emph-font-sizes: (
-  null  : (28px, 1.19),
+  null  : (28px, 1.4),
   small : 30px,
   medium: (38px),
   large : (42px),
 );
+
 
 $p-font-sizes: (
   null  : (16px, 1.6),
@@ -71,4 +65,11 @@ $p-font-sizes: (
   large : (20px,1.75),
 );
 
-$small-font-sizes: $h6-font-sizes;
+$h6-font-sizes: $p-font-sizes;
+
+$small-font-sizes: (
+  null  : (12px, 1.4),
+  small : 14px,
+  medium: (15px, 1.6),
+  large : (16px),
+);

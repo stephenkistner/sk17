@@ -51,7 +51,7 @@ activate :blog do |blog|
   blog.name = "projects"
   blog.prefix = "projects"
   blog.permalink = '{namey}.html'
-  blog.sources = '{namey}.html'
+  blog.sources = '{id}-{namey}.html'
 end
 
 activate :blog do |blog|

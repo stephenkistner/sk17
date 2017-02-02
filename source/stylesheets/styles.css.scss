@@ -47,9 +47,14 @@ h2 {
   font-weight: 400;
 }
 
+h3 {
+  @include font-size($h3-font-sizes);
+}
+
 h5 {
-  font-family: $work;
+  font-family: $cooper;
   @include font-size($h5-font-sizes);
+  font-weight: 400;
 }
 
 h6 {
@@ -69,6 +74,14 @@ p.emph {
   font-family: $work;
   @include font-size($emph-font-sizes);
   font-weight: 300;
+}
+
+p.blockquote {
+  text-indent: -.5em;
+}
+
+p .lead {
+  font-family: $cooper;
 }
 
 small {
@@ -189,7 +202,7 @@ section {
 .dark-bg {
   background-color: $black;
   color: $white;
-  padding-top: 5vh;
+  padding-top: 10vh;
   padding-bottom: 5vh;
 }
 
@@ -198,73 +211,47 @@ section {
     section {
       margin-bottom: 15vh;
     }
-    h2 {
+    h3, h5 {
       margin-bottom: .5em;
-      margin-top: 5vh;
-    }
-    h5 {
-      margin-bottom: 1.5em;
+      //text-align: center;
       @include span-columns(12);
     }
-    h5 + h2 {
-      margin-top: 0;
+    .inline-video {
+      @include span-columns(12);
     }
     p.emph {
-      margin-top: .7em;
-      margin-bottom: 1.5em;
+      margin-top: .2em;
+      margin-bottom: 1em;
     }
     img {
       max-width: 100%;
     }
+    p + img, p + p img, .inline-video {
+      margin-top: 10vh;
+      margin-bottom: 5vh;
+    }
     .problem {
-      p {
-        @include span-columns(6);
-        @include shift(3);
-      }
-      h2, p.lead {
+      h3, p.lead {
         text-align: center;
-        @include span-columns(10);
-        @include shift(1);
+      }
+      p.lead {
+        margin-top: 0;
       }
     }
     @include respond-to('small') {
-      h2, p, h5 {
+      h3, p, h5, h6, .inline-video {
         @include span-columns(10);
         @include shift(1);
       }
     }
     @include respond-to('medium') {
-      h2 {
-        @include span-columns(7);
-        @include shift(3);
-      }
-      h5 {
-        @include span-columns(3);
-        @include shift(0);
-      }
-      h5 + h2 {
-        @include shift(0);
-      }
-      p {
-        @include span-columns(7);
-        @include shift(3);
+      p, h3, h5, h6, .inline-video {
+        @include span-columns(8);
+        @include shift(2);
       }
     }
     @include respond-to('large') {
-      h2 {
-        @include span-columns(7);
-        @include shift(3);
-      }
-      h5 {
-        @include span-columns(3);
-      }
-      h5 + h2 {
-        @include shift(0);
-      }
-      p {
-        @include span-columns(7);
-        @include shift(3);
-      }
+
     }
   }
 }
@@ -278,6 +265,9 @@ section {
   margin-bottom: 5vh;
   small {
     font-family: $work;
+  }
+  h6 {
+    @include font-size($small-font-sizes);
   }
   .emph {
     @include span-columns(12);
@@ -340,15 +330,15 @@ section {
 }
 
 .btn {
-  @include font-size($h3-font-sizes);
+  @include font-size($h5-font-sizes);
   font-family: $cooper;
   text-transform: uppercase;
   display: block;
   height: 3.2em;
   background: $white;
-  border: 3px solid $black;
+  border: 1px solid $black;
   text-align: center;
-  padding: 1.1em 1.5em;
+  padding: .8em 1.5em;
   border-radius: 12px;
   box-shadow: long-shadow(
     $direction: 36deg,
@@ -357,78 +347,34 @@ section {
     $fade: $black
   );
   transition: all .3s ease-in-out;
+  @include respond-to('medium') {
+    border-width: 2px;
+  }
+  @include respond-to('large') {
+    border-width: 3px;
+  }
 }
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: long-shadow(
-    $direction: 23deg,
-    $length: 1em,
+    $direction: 29deg,
+    $length: .75em,
     $color: $black,
     $fade: $black
   );
 }
 
-// (image, 2up)
-.images-2up-a {
-  @include span-columns(12);
-  margin: 8vh auto 10vh auto;
-  display: flex;
-  flex-flow: column;
-  .img-1, .img-2 {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .img-1 {
-    margin-bottom: 1em;
-  }
+.proj-btn {
+  margin: 5vh auto 10vh auto;
+  @include span-columns(8);
+  @include shift(2);
   @include respond-to('medium') {
-    flex-flow: row;
-    align-items: flex-start;
-    .img-1 {
-      @include span-columns(6);
-      margin-bottom: 0;
-    }
-    .img-2 {
-      @include span-columns(4);
-      margin-left: auto;
-      padding-top: 15vh;
-    }
-  }
-}
-
-.images-btn {
-  @include span-columns(12);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-bottom: 20vh;
-  img, .btn {
-    width: 83%;
-  }
-  .btn {
-    margin-top: 5vh;
-  }
-  @include respond-to('medium') {
-    justify-content: space-between;
-    img {
-      width: 41.67%;
-    }
-    .img-1 {
-      padding-top: 15vh;
-    }
-    .btn {
-      width: 60%;
-      margin-left: 20%;
-      margin-top: 10vh;
-    }
+    @include span-columns(6);
+    @include shift(3);
   }
   @include respond-to('large') {
-    .btn {
-      width: 41.76;
-      margin-left: 50%;
-    }
+    @include span-columns(4);
+    @include shift(4);
   }
 }
 
@@ -464,19 +410,70 @@ section {
 }
 
 //video playback
-.embed-container { position: relative; height: 0; overflow: hidden; max-width: 100%; height: auto;  } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.embed-container { position: relative; height: 0; overflow: hidden; max-width: 100%; height: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
 
-.video-bg {
-  //padding: 10vh 0;
-  //background-color: #000;
-}
 
-.video-bg, .browser-window {
+.big-video, .browser-window {
   margin-bottom: 5vh;
   @include respond-to('small') {
     margin-bottom: 10vh;
   }
 }
+
+// ##################  BIG FRAME SEQUENCE  ########################
+
+.bg-fill {
+  padding: 5vh 0;
+  margin-bottom: 5vh;
+  @include respond-to('medium') {
+    padding: 10vh 0;
+    margin-bottom: 10vh;
+  }
+}
+
+.frame-block {
+  background-color: none;
+  @include outer-container;
+  padding: 0 1em;
+  .row1, .row2, .row3 {
+    @include span-columns(12);
+  }
+  img {
+    margin-bottom: 1em;
+  }
+  @include respond-to('small') {
+    img {
+      @include span-columns(6);
+      margin-bottom: 0;
+    }
+    .row1, .row2 {
+      margin-bottom: 2.35765%;
+    }
+  }
+  @include respond-to('medium') {
+    .size5 {
+      @include span-columns(5);
+    }
+    .size7 {
+      @include span-columns(7);
+    }
+    .row1, .row3 {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+    }
+    .row3 {
+      align-items: flex-start;
+      flex-direction: row-reverse;
+      .size7 {
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+
 
 //############  CAPTIONS  #################
 .img-caption-R, .img-caption-L {
@@ -517,14 +514,6 @@ section {
     }
   }
 }
-
-.img-caption-R {
-  p.caption {
-    //margin-left: auto;
-    //margin-right: 0;
-  }
-}
-
 .img-caption-L {
   @include respond-to('medium') {
     flex-flow: row-reverse;
@@ -534,6 +523,60 @@ section {
     p.caption {
       margin-right: auto;
       margin-left: 0;
+    }
+  }
+}
+
+
+
+
+//######################  JUST IMAGES #######################
+// (image, 2up)
+.images-2up-a {
+  @include span-columns(12);
+  margin: 8vh auto 10vh auto;
+  display: flex;
+  flex-flow: column;
+  .img-1, .img-2 {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .img-1 {
+    margin-bottom: 1em;
+  }
+  @include respond-to('medium') {
+    flex-flow: row;
+    align-items: flex-start;
+    .img-1 {
+      @include span-columns(6);
+      margin-bottom: 0;
+    }
+    .img-2 {
+      @include span-columns(4);
+      margin-left: auto;
+      padding-top: 15vh;
+    }
+  }
+}
+
+.images-2up-equal {
+  @include span-columns(12);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 20vh;
+  img, {
+    width: 83%;
+  }
+  @include respond-to('medium') {
+    justify-content: space-between;
+    img {
+      width: 41.67%;
+    }
+    .img-1 {
+      padding-top: 15vh;
     }
   }
 }

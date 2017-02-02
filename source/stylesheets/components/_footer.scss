@@ -51,7 +51,7 @@ footer {
     .other {
       a {
         font-family: $cooper;
-        font-weight: bold;
+        font-weight: 400;
         @include font-size($footer-link-sizes);
         box-shadow: none;
       }
