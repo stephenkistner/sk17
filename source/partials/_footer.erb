@@ -1,20 +1,52 @@
-
+<div class="split">
+  <h3>What&rsquo;s next?</h3>
+</div>
 
 <div class="footer-bg">
 <footer>
   <div class="links">
     <div class="next">
-      <a href="#"><h2>more about me</h2></a>
-      <p>find out why I like Cooper Black</p>
+      <% if current_page.data.nextpage %>
+        <% nextplace = String(current_page.data.nextpage) %>
+        <% get_page(nextplace).select do |page| -%>
+              <h2><a href="<%= page.url %>" rel="next" title="<%= page.data.title %>"><%= page.data.title -%></a></h2>
+              <p><%= page.data.next_desc -%></p>
+        <% end %>
+      <% else %>
+        <% if current_page.data.last == true %>
+          <% nextplace = String(1) %>
+        <% else %>
+          <% nextplace = String(1 + Integer(current_page.data.place)) %>
+        <% end %>
+        <% get_page_by_place(nextplace).select do |page| -%>
+              <h2><a href="<%= page.url %>" rel="next" title="Next Project: <%= page.data.title %>">Next Project</a></h2>
+              <p><%= page.data.title -%></p>
+              <p><small>Looking for the <a href="/projects/#experiments">web experiments</a>?</small></p>
+        <% end %>
+      <% end %>
+
     </div>
     <div class="other">
-      <a href="#">Previous Project</a>
-      <p><small>Metereol: A Typographic Weather Visualizer</small></p>
+      <% if current_page.data.noprev %>
+      <% else %>
+        <% if current_page.data.firstone == true %>
+          <% prevplace = String(3) %>
+        <% else %>
+          <% prevplace = String(Integer(current_page.data.place) - 1) %>
+        <% end %>
+        <% get_page_by_place(prevplace).select do |prev| %>
+          <div class="prev">
+            <a href="<%= prev.url %>" rel="prev" title="Previous Project: <%= prev.data.title %>">Previous Project</a>
+            <p><small><%= prev.data.title %></small></p>
+          </div>
+        <% end %>
+      <% end %>
+
       <ul>
-        <li><a href="#">All Projects</a></li>
-        <li><a href="#">About SK</a></li>
-        <li><a href="#">Rndm Output</a></li>
-        <li><a href="#">Bookshelf</a></li>
+        <li><a href="/projects/">All Projects</a></li>
+        <li><a href="/about/">About SK</a></li>
+        <li><a href="/rndm-output/">Rndm Output</a></li>
+        <li><a href="/bookshelf">Bookshelf</a></li>
       </ul>
     </div>
   </div>

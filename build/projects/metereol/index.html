@@ -1,23 +1,66 @@
----
-layout: case
+<!doctype html>
+<html>
+  <head>
+      <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
-order: 1
-title: "Metereol: A Typographic Weather Visualizer"
-date: 01-01-2017
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title>Stephen Kistner - Metereol: A Typographic Weather Visualizer</title>
 
-theme_color: 000
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gilda+Display|Junge" rel="stylesheet">
 
-head1: How does the
-head2: '<span style="letter-spacing: -.05em">w</span>eather feel?'
-summary: "Metereol is a weather visualizer. It generates a holistic representation of how it feels outside."
-role: "I concepted, designed & built Metereol in just 3 weeks. I constructed a visual system that represents weather data, worked around the limitations of P5.js to build a functional prototype, and published the app on the Chrome web store."
-learned: "Setbacks are inevitable. Determining which problems to solve and which to work around is essential to developing a solid product."
 
----
+  <link href="/stylesheets/styles.css" rel="stylesheet" />
 
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="/javascripts/all.js"></script>
+
+  </head>
+
+  <body class="projects projects_metereol projects_metereol_index">
+  <div class="for-cool-text">
+    <nav class="navigation">
+<a class="logo" href="#"><small>Stephen Kistner</small></a>
+
+<small class="contact"><a href="#">chat@with.sk</a></small>
+</nav>
+
+    
+
+<!--<div class="intro-bg" style="background-image: url('/projects/metereol/hero.jpg')">
+  <section class="intro">
+    <div class="casing" style="color: #0">
+      <h2>How does the</h2>
+      <h1>How does the weather feel?</h1>
+    </div>
+  </section>
+</div>-->
+
+
+<section class="brief">
+  <h2>How does the weather feel?</h2>
+  <p class="emph">Metereol is a weather visualizer. It generates a holistic representation of how it feels outside.</p>
+    <div class="role">
+      <h6>My Role:</h6>
+      <small>I concepted, designed & built Metereol in just 3 weeks. I constructed a visual system that represents weather data, worked around the limitations of P5.js to build a functional prototype, and published the app on the Chrome web store.</small>
+    </div>
+    <div class="learned">
+      <h6>What I learned:</h6>
+
+        <small> Setbacks are inevitable. Determining which problems to solve and which to work around is essential to developing a solid product.</small>
+    </div>
+</section>
+
+
+<div class="content">
 
 <section>
-
 <div class="browser-window">
   <div class="frame">
         <span></span>
@@ -29,13 +72,19 @@ learned: "Setbacks are inevitable. Determining which problems to solve and which
     </div>
 </div>
 
-  <a class="btn proj-btn" href="#">See it Live!</a>
-
+  <!--<a class="btn proj-btn" href="#">See it Live!</a>-->
 <div class="images-2up-equal">
-  <%= image_tag "test.png", :class => "img-1" %>
-  <%= image_tag "test.png", :class => "img-2" %>
+  <img src="/projects/metereol/test.png" class="img-1" alt="Test" />
+  <img src="/projects/metereol/test.png" class="img-2" alt="Test" />
 </div>
 
+<div class="images-2up-equal">
+  <img src="/projects/metereol/test.png" class="img-1" alt="Test" />
+  <img src="/projects/metereol/test.png" class="img-2" alt="Test" />
+</div>
+</section>
+
+<section>
 
 <h5>The Challenge</h5>
 <h3>Temperature is a feeling, not a number.</h3>
@@ -49,10 +98,17 @@ learned: "Setbacks are inevitable. Determining which problems to solve and which
 
 
 
-<div class="images-2up-a">
-  <%= image_tag "test.png", :class => "img-1" %>
-  <%= image_tag "test.png", :class => "img-2" %>
-</div>
+<!--<div class="images-2up-a">
+  <img src="/projects/metereol/test.png" class="img-1" alt="Test" />
+  <img src="/projects/metereol/test.png" class="img-2" alt="Test" />
+</div>-->
+
+
+</section>
+
+<section>
+
+<img src="/projects/metereol/temps.png" alt="Temps" />
 </section>
 
 <section>
@@ -83,24 +139,26 @@ learned: "Setbacks are inevitable. Determining which problems to solve and which
 
 <p>I structured my workflow around this principle. From sketching to prototyping, each element needed to be viewed in the context of the system. Often, a color or shape would take on an entirely different meaning when viewed with the rest of the components.</p>
 
+<div class="img-caption-R">
+  <img src="/projects/metereol/sketches2.jpg" alt="Sketches2" />
+  <p class="caption"><b>Rough, gestural sketches</b> helped express how different atmospheric conditions felt. From these, I developed more refined drawings to flesh out the visual style.</p>
+</div>
 
-  <p><%= image_tag "sketches2.jpg"%></p>
-  <p><span class="lead">Rough, gestural sketches</span> helped express how different atmospheric conditions felt. From these, I developed more refined drawings to flesh out the visual style.</p>
 
-<%= image_tag "illy.jpg"%>
-<p class=""><span class="lead">Moving directly to Illustrator</span> let me explore and relate different colors and forms. I could rapidly combine elements and look at the system as a whole as I developed its parts. Working with vectors also enabled me to think about how each part would translate into code.</p>
+<img src="/projects/metereol/illy.jpg" alt="Illy" />
+<p class=""><span class="lead">Working digitally right away</span> let me explore the relationships between different colors and forms. I could rapidly combine elements and look at the system as a whole as I developed its parts. Working with vectors also enabled me to think about how each part would translate into code.</p>
 </section>
 
 <section>
 <div class="img-caption-R">
-  <%= image_tag "type.png"%>
+  <img src="/projects/metereol/type.png" alt="Type" />
   <p class="caption"><b>The Typography</b><br>
 I chose Calibre Black as the system’s typeface. Its simple geometric forms put the focus on the visuals. The letterform's small counters and high legibility allowed them to act as containers for the visuals without sacrificing readability.</p>
 </div>
 </section>
 
 <section>
-<%= image_tag "processing.jpg"%>
+<img src="/projects/metereol/processing.jpg" alt="Processing" />
 <p><span class="lead">Using Processing</span>, I started outlining the system's motion. Ultimately the project would live online, but I was most familiar with Processing, and it let me prototype quickly.</p>
 
 </section>
@@ -108,8 +166,8 @@ I chose Calibre Black as the system’s typeface. Its simple geometric forms put
 <div class="dark-bg">
 <section class="problem">
 
-  <h3>Everything fell apart</h3>
-  <p class="emph lead">...when I masked the wave inside the type.</p>
+  <h3>A Setback</h3>
+  <p class="emph">Everything fell apart when I masked the temperature wave inside the type. </p>
 
   <p>On its own, the temperature wave moved as intended. But when I combined it with the typography, the app would lock up and crash. Using the console, I discovered that the frame rate would plummet as soon as the program launched.</p>
   <p>I knew it was a problem with how the text and wave were combined. Documentation of P5 was sparse online, especially regarding image masks. After hours of digging, I found a solution, and had to change how I layered the visuals.</p>
@@ -119,3 +177,35 @@ I chose Calibre Black as the system’s typeface. Its simple geometric forms put
 
 </section>
 </div>
+
+</div>
+
+
+    
+
+<div class="footer-bg">
+<footer>
+  <div class="links">
+    <div class="next">
+      <a href="#"><h2>more about me</h2></a>
+      <p>find out why I like Cooper Black</p>
+    </div>
+    <div class="other">
+      <a href="#">Previous Project</a>
+      <p><small>Metereol: A Typographic Weather Visualizer</small></p>
+      <ul>
+        <li><a href="#">All Projects</a></li>
+        <li><a href="#">About SK</a></li>
+        <li><a href="#">Rndm Output</a></li>
+        <li><a href="#">Bookshelf</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy"><small>&copy;2017 Stephen Kistner. Thanks for stopping by!</small><small class="toplink"><a href="#">Back to Top</a></small></div>
+
+</footer>
+</div>
+
+  </div>
+  </body>
+</html>

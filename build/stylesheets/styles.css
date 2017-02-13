@@ -1,0 +1,1517 @@
+/* line 4, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box; }
+
+/* line 9, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+/* line 8, _normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 18, _normalize.scss */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+/* line 31, _normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+footer,
+summary {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 50, _normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 61, _normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 70, _normalize.scss */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+/* line 79, _normalize.scss */
+template,
+[hidden] {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 92, _normalize.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 102, _normalize.scss */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 115, _normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 125, _normalize.scss */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 134, _normalize.scss */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 143, _normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 152, _normalize.scss */
+p, .projects .content ol {
+  margin: 0;
+  margin-bottom: 1.5em; }
+
+/* line 157, _normalize.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 165, _normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 175, _normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 183, _normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 187, _normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 198, _normalize.scss */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 206, _normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 218, _normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 230, _normalize.scss */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 239, _normalize.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 253, _normalize.scss */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+/* line 265, _normalize.scss */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 274, _normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 284, _normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 295, _normalize.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 306, _normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 318, _normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 329, _normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 342, _normalize.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 355, _normalize.scss */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 364, _normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 374, _normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 384, _normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+/* line 393, _normalize.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+/* line 402, _normalize.scss */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 412, _normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+@font-face {
+  font-family: "Cooper";
+  src: url("/fonts/CooperBlack.svg#Cooper") format("svg");
+  src: url("/fonts/CooperBlack.eot");
+  src: url("/fonts/CooperBlack.eot?#iefix") format("embedded-opentype"), url("/fonts/CooperBlack.woff") format("woff"), url("/fonts/CooperBlack.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "Souvenir";
+  src: url("/fonts/SouvenirStd-Light.svg#Souvenir") format("svg");
+  src: url("/fonts/SouvenirStd-Light.eot");
+  src: url("/fonts/SouvenirStd-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/SouvenirStd-Light.woff") format("woff"), url("/fonts/SouvenirStd-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "Usherwood";
+  src: url("/fonts/UsherwoodStd-Bold.svg#Usherwood") format("svg");
+  src: url("/fonts/UsherwoodStd-Bold.eot");
+  src: url("/fonts/UsherwoodStd-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/UsherwoodStd-Bold.woff") format("woff"), url("/fonts/UsherwoodStd-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "Utopia";
+  src: url("/fonts/Utopia-Regular.svg#Utopia") format("svg");
+  src: url("/fonts/Utopia-Regular.eot");
+  src: url("/fonts/Utopia-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/Utopia-Regular.woff") format("woff"), url("/fonts/Utopia-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'Cooper';
+    src: url("/fonts/CooperBlack.svg") format("svg"); } }
+/* line 9, styles.css.scss */
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility;
+  height: 100vh;
+  /* set viewport constraint */
+  min-height: 100%; }
+
+/* line 19, styles.css.scss */
+::selection {
+  background: rgba(245, 203, 92, 0.75); }
+
+/* line 23, styles.css.scss */
+body {
+  background: #fff center center no-repeat fixed;
+  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #242423; }
+
+/* line 29, styles.css.scss */
+.for-cool-text {
+  padding: 0;
+  margin: 0;
+  background-color: #fff; }
+
+/* line 35, styles.css.scss */
+h1 {
+  font-family: "GT Sectra Fine", "Cooper Black", serif;
+  font-size: 50px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: -.01em;
+  font-weight: normal; }
+  @media screen and (min-width: 480px) {
+    /* line 35, styles.css.scss */
+    h1 {
+      font-size: 80px; } }
+  @media screen and (min-width: 700px) {
+    /* line 35, styles.css.scss */
+    h1 {
+      font-size: 120px; } }
+  @media screen and (min-width: 1024px) {
+    /* line 35, styles.css.scss */
+    h1 {
+      font-size: 80px; } }
+
+/* line 43, styles.css.scss */
+h2 {
+  font-family: "GT Sectra Fine", "Cooper Black", serif;
+  font-size: 36px;
+  line-height: 0.95;
+  letter-spacing: -.01em;
+  font-weight: bold;
+  margin-bottom: .4em; }
+  @media screen and (min-width: 480px) {
+    /* line 43, styles.css.scss */
+    h2 {
+      font-size: 50px; } }
+  @media screen and (min-width: 700px) {
+    /* line 43, styles.css.scss */
+    h2 {
+      font-size: 60px; } }
+  @media screen and (min-width: 1024px) {
+    /* line 43, styles.css.scss */
+    h2 {
+      font-size: 72px; } }
+
+/* line 51, styles.css.scss */
+h3 {
+  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  line-height: 1; }
+  @media screen and (min-width: 480px) {
+    /* line 51, styles.css.scss */
+    h3 {
+      font-size: 40px; } }
+  @media screen and (min-width: 700px) {
+    /* line 51, styles.css.scss */
+    h3 {
+      font-size: 48px; } }
+  @media screen and (min-width: 1024px) {
+    /* line 51, styles.css.scss */
+    h3 {
+      font-size: 40px; } }
+
+/* line 56, styles.css.scss */
+h5 {
+  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: bold; }
+  @media screen and (min-width: 480px) {
+    /* line 56, styles.css.scss */
+    h5 {
+      font-size: 17px; } }
+  @media screen and (min-width: 700px) {
+    /* line 56, styles.css.scss */
+    h5 {
+      font-size: 18px;
+      line-height: 1.75; } }
+  @media screen and (min-width: 1024px) {
+    /* line 56, styles.css.scss */
+    h5 {
+      font-size: 18px;
+      line-height: 1.75; } }
+
+/* line 62, styles.css.scss */
+h6 {
+  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: .2em;
+  font-weight: bold; }
+  @media screen and (min-width: 480px) {
+    /* line 62, styles.css.scss */
+    h6 {
+      font-size: 17px; } }
+  @media screen and (min-width: 700px) {
+    /* line 62, styles.css.scss */
+    h6 {
+      font-size: 18px;
+      line-height: 1.75; } }
+  @media screen and (min-width: 1024px) {
+    /* line 62, styles.css.scss */
+    h6 {
+      font-size: 18px;
+      line-height: 1.75; } }
+
+/* line 70, styles.css.scss */
+p, .projects .content ol {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 1em; }
+  @media screen and (min-width: 480px) {
+    /* line 70, styles.css.scss */
+    p, .projects .content ol {
+      font-size: 17px; } }
+  @media screen and (min-width: 700px) {
+    /* line 70, styles.css.scss */
+    p, .projects .content ol {
+      font-size: 18px;
+      line-height: 1.75; } }
+  @media screen and (min-width: 1024px) {
+    /* line 70, styles.css.scss */
+    p, .projects .content ol {
+      font-size: 18px;
+      line-height: 1.75; } }
+
+/* line 76, styles.css.scss */
+p.emph, .projects .content ol {
+  font-family: "GT Sectra Fine", "Cooper Black", serif;
+  font-size: 36px;
+  line-height: 1.3;
+  font-weight: normal; }
+  @media screen and (min-width: 480px) {
+    /* line 76, styles.css.scss */
+    p.emph, .projects .content ol {
+      font-size: 40px; } }
+  @media screen and (min-width: 700px) {
+    /* line 76, styles.css.scss */
+    p.emph, .projects .content ol {
+      font-size: 48px; } }
+  @media screen and (min-width: 1024px) {
+    /* line 76, styles.css.scss */
+    p.emph, .projects .content ol {
+      font-size: 54px; } }
+
+/* line 82, styles.css.scss */
+p.blockquote, .projects .content ol.blockquote {
+  text-indent: -.5em; }
+
+/* line 86, styles.css.scss */
+p .lead, .projects .content ol .lead {
+  font-family: "GT Sectra Fine", "Cooper Black", serif;
+  font-weight: bold; }
+
+/* line 91, styles.css.scss */
+small, .brief .learned ul {
+  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.4; }
+  @media screen and (min-width: 480px) {
+    /* line 91, styles.css.scss */
+    small, .brief .learned ul {
+      font-size: 14px; } }
+  @media screen and (min-width: 700px) {
+    /* line 91, styles.css.scss */
+    small, .brief .learned ul {
+      font-size: 15px;
+      line-height: 1.6; } }
+  @media screen and (min-width: 1024px) {
+    /* line 91, styles.css.scss */
+    small, .brief .learned ul {
+      font-size: 16px; } }
+
+/* line 96, styles.css.scss */
+a {
+  color: inherit;
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 #fff, inset 0 -2px 0 #242423; }
+
+/* line 102, styles.css.scss */
+section, footer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em; }
+  /* line 20, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/mixins/_clearfix.scss */
+  section::after, footer::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+/* line 1, components/_navigation.scss */
+nav.navigation {
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  padding: 2em 1em 1em 1em;
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  margin-left: -50%; }
+  @media (min-width: 1200px) {
+    /* line 1, components/_navigation.scss */
+    nav.navigation {
+      width: 1200px;
+      margin-left: -600px; } }
+  /* line 16, components/_navigation.scss */
+  nav.navigation a {
+    color: #fff;
+    box-shadow: none; }
+  /* line 20, components/_navigation.scss */
+  nav.navigation .logo {
+    pointer-events: all;
+    position: fixed;
+    float: left;
+    display: flex;
+    align-items: center;
+    border: none; }
+    /* line 26, components/_navigation.scss */
+    nav.navigation .logo img {
+      width: .9em; }
+    /* line 29, components/_navigation.scss */
+    nav.navigation .logo small, nav.navigation .logo .brief .learned ul, .brief .learned nav.navigation .logo ul {
+      font-weight: bold;
+      font-family: "GT Sectra Fine", "Cooper Black", serif; }
+  /* line 36, components/_navigation.scss */
+  nav.navigation .contact {
+    pointer-events: all;
+    margin-left: auto;
+    float: right; }
+
+/* line 1, components/_footer.scss */
+.footer-bg {
+  background-color: #242423;
+  position: relative;
+  z-index: 1; }
+
+/* line 7, components/_footer.scss */
+footer {
+  color: #fff;
+  margin-top: 20vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  min-height: 30vh; }
+  /* line 8, components/_footer.scss */
+  footer a {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    box-shadow: none;
+    transition: all .35s .25s ease-in-out; }
+  /* line 16, components/_footer.scss */
+  footer a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    left: 0;
+    height: 25%;
+    background: #F5CB5C;
+    transition: width 0.25s ease-in; }
+  /* line 33, components/_footer.scss */
+  footer a:hover::after {
+    width: 100%; }
+  /* line 48, components/_footer.scss */
+  footer .links {
+    display: flex;
+    flex-direction: column; }
+    /* line 52, components/_footer.scss */
+    footer .links .other a {
+      font-family: "GT Sectra Fine", "Cooper Black", serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 0.97;
+      box-shadow: none; }
+      @media screen and (min-width: 480px) {
+        /* line 52, components/_footer.scss */
+        footer .links .other a {
+          font-size: 22px; } }
+      @media screen and (min-width: 700px) {
+        /* line 52, components/_footer.scss */
+        footer .links .other a {
+          font-size: 25px; } }
+      @media screen and (min-width: 1024px) {
+        /* line 52, components/_footer.scss */
+        footer .links .other a {
+          font-size: 27px; } }
+    /* line 58, components/_footer.scss */
+    footer .links .other ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 1em 0 1em 0;
+      padding: 0; }
+      /* line 65, components/_footer.scss */
+      footer .links .other ul li {
+        display: inline-block;
+        margin-bottom: 1.5em;
+        margin-right: 5%;
+        flex: 0 0 45%; }
+    /* line 73, components/_footer.scss */
+    footer .links .next {
+      text-align: right; }
+  /* line 78, components/_footer.scss */
+  footer .copy {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-top: 1em; }
+    /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+    footer .copy:last-child {
+      margin-right: 0; }
+  /* line 82, components/_footer.scss */
+  footer .toplink {
+    float: right;
+    display: none; }
+  @media (min-width: 700px) {
+    /* line 7, components/_footer.scss */
+    footer {
+      margin-top: 30vh;
+      padding-top: 10vh;
+      padding-bottom: 5vh; }
+      /* line 90, components/_footer.scss */
+      footer .links {
+        flex-flow: row-reverse;
+        align-items: center; }
+        /* line 93, components/_footer.scss */
+        footer .links .other {
+          margin-right: auto; }
+          /* line 94, components/_footer.scss */
+          footer .links .other ul {
+            flex-direction: column; }
+      /* line 102, components/_footer.scss */
+      footer .toplink {
+        display: inline; } }
+
+/* line 119, styles.css.scss */
+.intro-bg {
+  width: 100%;
+  background: no-repeat bottom center;
+  background-size: cover; }
+
+/* line 125, styles.css.scss */
+.intro {
+  display: flex;
+  align-items: center;
+  min-height: 60vh;
+  margin-bottom: 5vh;
+  text-align: center; }
+  /* line 131, styles.css.scss */
+  .intro .casing {
+    flex: 0 0 100%; }
+  /* line 134, styles.css.scss */
+  .intro h1, .intro h2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    font-weight: bold;
+    /*text-shadow: long-shadow(
+      $direction: 23deg,
+      $length: .15em,
+      $color: $black,
+      $fade: $black
+    );
+    -webkit-text-stroke: 1px $black;*/ }
+    /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .intro h1:last-child, .intro h2:last-child {
+      margin-right: 0; }
+  /* line 146, styles.css.scss */
+  .intro h2 {
+    text-align: leeft;
+    margin-bottom: .2em; }
+  @media (min-width: 700px) {
+    /* line 125, styles.css.scss */
+    .intro {
+      min-height: 80vh;
+      margin-bottom: 10vh; }
+      /* line 153, styles.css.scss */
+      .intro h1, .intro h2 {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        margin-left: 8.5298%; }
+        /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+        .intro h1:last-child, .intro h2:last-child {
+          margin-right: 0; } }
+  @media (min-width: 1024px) {
+    /* line 125, styles.css.scss */
+    .intro {
+      min-height: 80vh; } }
+
+/* line 172, styles.css.scss */
+.index .opening-remarks {
+  text-align: left; }
+  /* line 174, styles.css.scss */
+  .index .opening-remarks .emph {
+    margin-top: 0; }
+    /* line 176, styles.css.scss */
+    .index .opening-remarks .emph span {
+      font-family: "GT Sectra Fine", "Cooper Black", serif; }
+@media (min-width: 700px) {
+  /* line 183, styles.css.scss */
+  .index .opening-remarks p, .index .opening-remarks .projects .content ol, .projects .content .index .opening-remarks ol {
+    text-align: center;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%; }
+    /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .index .opening-remarks p:last-child, .index .opening-remarks .projects .content ol:last-child, .projects .content .index .opening-remarks ol:last-child {
+      margin-right: 0; } }
+
+/* line 194, styles.css.scss */
+.about .main .profile {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .about .main .profile:last-child {
+    margin-right: 0; }
+/* line 197, styles.css.scss */
+.about .main .bio {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 8.5298%; }
+  /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .about .main .bio:last-child {
+    margin-right: 0; }
+  /* line 200, styles.css.scss */
+  .about .main .bio .likes, .about .main .bio .dislikes {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 48.21067%; }
+    /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .about .main .bio .likes:last-child, .about .main .bio .dislikes:last-child {
+      margin-right: 0; }
+
+/* line 207, styles.css.scss */
+.dark-bg {
+  background-color: #242423;
+  color: #fff;
+  padding-top: 10vh;
+  padding-bottom: 5vh; }
+
+/* line 216, styles.css.scss */
+.projects .content section, .projects .content footer {
+  margin-bottom: 15vh; }
+/* line 219, styles.css.scss */
+.projects .content h3, .projects .content h5 {
+  margin-bottom: .7em;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .projects .content h3:last-child, .projects .content h5:last-child {
+    margin-right: 0; }
+/* line 224, styles.css.scss */
+.projects .content h6 {
+  margin-top: 1em; }
+/* line 227, styles.css.scss */
+.projects .content .inline-video {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .projects .content .inline-video:last-child {
+    margin-right: 0; }
+/* line 230, styles.css.scss */
+.projects .content p.emph, .projects .content ol {
+  margin-top: .5em;
+  margin-bottom: 1em; }
+/* line 234, styles.css.scss */
+.projects .content p.label, .projects .content ol.label {
+  margin-bottom: -.5em;
+  font-weight: bold; }
+/* line 242, styles.css.scss */
+.projects .content img {
+  max-width: 100%; }
+/* line 245, styles.css.scss */
+.projects .content p + img, .projects .content ol + img, .projects .content p + p img, .projects .content ol + p img, .projects .content p + ol img, .projects .content ol + ol img, .projects .content .inline-video {
+  margin-top: 10vh;
+  margin-bottom: 5vh; }
+/* line 250, styles.css.scss */
+.projects .content .problem h3, .projects .content .problem p.lead, .projects .content .problem ol.lead {
+  text-align: center; }
+/* line 253, styles.css.scss */
+.projects .content .problem p.lead, .projects .content .problem ol.lead {
+  margin-top: 0; }
+@media (min-width: 480px) {
+  /* line 258, styles.css.scss */
+  .projects .content h3, .projects .content p, .projects .content ol, .projects .content h5, .projects .content h6, .projects .content .inline-video {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%; }
+    /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .projects .content h3:last-child, .projects .content p:last-child, .projects .content ol:last-child, .projects .content h5:last-child, .projects .content h6:last-child, .projects .content .inline-video:last-child {
+      margin-right: 0; } }
+@media (min-width: 700px) {
+  /* line 264, styles.css.scss */
+  .projects .content .inline-video {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%;
+    padding-right: 1px; }
+    /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .projects .content .inline-video:last-child {
+      margin-right: 0; }
+  /* line 269, styles.css.scss */
+  .projects .content p, .projects .content ol {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%; }
+    /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .projects .content p:last-child, .projects .content ol:last-child {
+      margin-right: 0; }
+  /* line 273, styles.css.scss */
+  .projects .content h3, .projects .content h5, .projects .content h6 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%; }
+    /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .projects .content h3:last-child, .projects .content h5:last-child, .projects .content h6:last-child {
+      margin-right: 0; }
+  /* line 277, styles.css.scss */
+  .projects .content p.emph, .projects .content ol, .projects .content h6.label {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 0%; }
+    /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .projects .content p.emph:last-child, .projects .content ol:last-child, .projects .content h6.label:last-child {
+      margin-right: 0; } }
+
+/* line 293, styles.css.scss */
+.brief {
+  padding-top: 10vh;
+  margin-bottom: 5vh; }
+  /* line 296, styles.css.scss */
+  .brief small, .brief .learned ul {
+    font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  /* line 299, styles.css.scss */
+  .brief h6 {
+    font-size: 12px;
+    line-height: 1.4; }
+    @media screen and (min-width: 480px) {
+      /* line 299, styles.css.scss */
+      .brief h6 {
+        font-size: 14px; } }
+    @media screen and (min-width: 700px) {
+      /* line 299, styles.css.scss */
+      .brief h6 {
+        font-size: 15px;
+        line-height: 1.6; } }
+    @media screen and (min-width: 1024px) {
+      /* line 299, styles.css.scss */
+      .brief h6 {
+        font-size: 16px; } }
+  /* line 302, styles.css.scss */
+  .brief .emph {
+    font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    line-height: 1.4;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-bottom: 5vh; }
+    @media screen and (min-width: 480px) {
+      /* line 302, styles.css.scss */
+      .brief .emph {
+        font-size: 30px; } }
+    @media screen and (min-width: 700px) {
+      /* line 302, styles.css.scss */
+      .brief .emph {
+        font-size: 38px; } }
+    @media screen and (min-width: 1024px) {
+      /* line 302, styles.css.scss */
+      .brief .emph {
+        font-size: 42px; } }
+    /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .brief .emph:last-child {
+      margin-right: 0; }
+  /* line 308, styles.css.scss */
+  .brief .role {
+    margin-bottom: 3vh; }
+  /* line 311, styles.css.scss */
+  .brief .learned {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .brief .learned:last-child {
+      margin-right: 0; }
+    /* line 313, styles.css.scss */
+    .brief .learned ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      /* line 318, styles.css.scss */
+      .brief .learned ul li {
+        display: inline; }
+      /* line 321, styles.css.scss */
+      .brief .learned ul li:before {
+        content: '\007e';
+        margin-right: .2em; }
+  @media (min-width: 480px) {
+    /* line 293, styles.css.scss */
+    .brief {
+      margin-bottom: 10vh; }
+      /* line 330, styles.css.scss */
+      .brief .summary .visual {
+        margin-top: 10vh; } }
+  @media (min-width: 700px) {
+    /* line 293, styles.css.scss */
+    .brief {
+      padding-top: 30vh; }
+      /* line 337, styles.css.scss */
+      .brief .emph {
+        margin-bottom: 10vh; }
+      /* line 340, styles.css.scss */
+      .brief .role {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%;
+        padding-right: 1em; }
+        /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+        .brief .role:last-child {
+          margin-right: 0; }
+      /* line 344, styles.css.scss */
+      .brief .learned {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 40.29137%;
+        margin-left: 8.5298%; }
+        /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+        .brief .learned:last-child {
+          margin-right: 0; }
+        /* line 348, styles.css.scss */
+        .brief .learned ul li {
+          display: block; } }
+  @media (min-width: 1024px) {
+    /* line 358, styles.css.scss */
+    .brief .learned {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-left: 17.05961%; }
+      /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .brief .learned:last-child {
+        margin-right: 0; } }
+
+/* line 365, styles.css.scss */
+.btn {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "GT Sectra Fine", "Cooper Black", serif;
+  text-transform: uppercase;
+  display: block;
+  height: 3.2em;
+  background: #fff;
+  border: 1px solid #242423;
+  text-align: center;
+  padding: .8em 1.5em;
+  border-radius: 12px;
+  box-shadow: 0.00294em 0.00405em 0 #242423, 0.00588em 0.00809em 0 #242423, 0.00882em 0.01214em 0 #242423, 0.01176em 0.01618em 0 #242423, 0.01469em 0.02023em 0 #242423, 0.01763em 0.02427em 0 #242423, 0.02057em 0.02832em 0 #242423, 0.02351em 0.03236em 0 #242423, 0.02645em 0.03641em 0 #242423, 0.02939em 0.04045em 0 #242423, 0.03233em 0.0445em 0 #242423, 0.03527em 0.04854em 0 #242423, 0.03821em 0.05259em 0 #242423, 0.04114em 0.05663em 0 #242423, 0.04408em 0.06068em 0 #242423, 0.04702em 0.06472em 0 #242423, 0.04996em 0.06877em 0 #242423, 0.0529em 0.07281em 0 #242423, 0.05584em 0.07686em 0 #242423, 0.05878em 0.0809em 0 #242423, 0.06172em 0.08495em 0 #242423, 0.06466em 0.08899em 0 #242423, 0.0676em 0.09304em 0 #242423, 0.07053em 0.09708em 0 #242423, 0.07347em 0.10113em 0 #242423, 0.07641em 0.10517em 0 #242423, 0.07935em 0.10922em 0 #242423, 0.08229em 0.11326em 0 #242423, 0.08523em 0.11731em 0 #242423, 0.08817em 0.12135em 0 #242423, 0.09111em 0.1254em 0 #242423, 0.09405em 0.12944em 0 #242423, 0.09698em 0.13349em 0 #242423, 0.09992em 0.13753em 0 #242423, 0.10286em 0.14158em 0 #242423, 0.1058em 0.14562em 0 #242423, 0.10874em 0.14967em 0 #242423, 0.11168em 0.15371em 0 #242423, 0.11462em 0.15776em 0 #242423, 0.11756em 0.1618em 0 #242423, 0.1205em 0.16585em 0 #242423, 0.12343em 0.16989em 0 #242423, 0.12637em 0.17394em 0 #242423, 0.12931em 0.17798em 0 #242423, 0.13225em 0.18203em 0 #242423, 0.13519em 0.18607em 0 #242423, 0.13813em 0.19012em 0 #242423, 0.14107em 0.19416em 0 #242423, 0.14401em 0.19821em 0 #242423, 0.14695em 0.20225em 0 #242423, 0.14989em 0.2063em 0 #242423, 0.15282em 0.21034em 0 #242423, 0.15576em 0.21439em 0 #242423, 0.1587em 0.21843em 0 #242423, 0.16164em 0.22248em 0 #242423, 0.16458em 0.22652em 0 #242423, 0.16752em 0.23057em 0 #242423, 0.17046em 0.23461em 0 #242423, 0.1734em 0.23866em 0 #242423, 0.17634em 0.24271em 0 #242423, 0.17927em 0.24675em 0 #242423, 0.18221em 0.2508em 0 #242423, 0.18515em 0.25484em 0 #242423, 0.18809em 0.25889em 0 #242423, 0.19103em 0.26293em 0 #242423, 0.19397em 0.26698em 0 #242423, 0.19691em 0.27102em 0 #242423, 0.19985em 0.27507em 0 #242423, 0.20279em 0.27911em 0 #242423, 0.20572em 0.28316em 0 #242423, 0.20866em 0.2872em 0 #242423, 0.2116em 0.29125em 0 #242423, 0.21454em 0.29529em 0 #242423, 0.21748em 0.29934em 0 #242423, 0.22042em 0.30338em 0 #242423, 0.22336em 0.30743em 0 #242423, 0.2263em 0.31147em 0 #242423, 0.22924em 0.31552em 0 #242423, 0.23218em 0.31956em 0 #242423, 0.23511em 0.32361em 0 #242423, 0.23805em 0.32765em 0 #242423, 0.24099em 0.3317em 0 #242423, 0.24393em 0.33574em 0 #242423, 0.24687em 0.33979em 0 #242423, 0.24981em 0.34383em 0 #242423, 0.25275em 0.34788em 0 #242423, 0.25569em 0.35192em 0 #242423, 0.25863em 0.35597em 0 #242423, 0.26156em 0.36001em 0 #242423, 0.2645em 0.36406em 0 #242423, 0.26744em 0.3681em 0 #242423, 0.27038em 0.37215em 0 #242423, 0.27332em 0.37619em 0 #242423, 0.27626em 0.38024em 0 #242423, 0.2792em 0.38428em 0 #242423, 0.28214em 0.38833em 0 #242423, 0.28508em 0.39237em 0 #242423, 0.28801em 0.39642em 0 #242423, 0.29095em 0.40046em 0 #242423, 0.29389em 0.40451em 0 #242423;
+  transition: all .3s ease-in-out; }
+  @media screen and (min-width: 480px) {
+    /* line 365, styles.css.scss */
+    .btn {
+      font-size: 17px; } }
+  @media screen and (min-width: 700px) {
+    /* line 365, styles.css.scss */
+    .btn {
+      font-size: 18px;
+      line-height: 1.75; } }
+  @media screen and (min-width: 1024px) {
+    /* line 365, styles.css.scss */
+    .btn {
+      font-size: 18px;
+      line-height: 1.75; } }
+  @media (min-width: 700px) {
+    /* line 365, styles.css.scss */
+    .btn {
+      border-width: 2px; } }
+  @media (min-width: 1024px) {
+    /* line 365, styles.css.scss */
+    .btn {
+      border-width: 3px; } }
+
+/* line 390, styles.css.scss */
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0.00364em 0.00656em 0 #242423, 0.00727em 0.01312em 0 #242423, 0.01091em 0.01968em 0 #242423, 0.01454em 0.02624em 0 #242423, 0.01818em 0.0328em 0 #242423, 0.02182em 0.03936em 0 #242423, 0.02545em 0.04592em 0 #242423, 0.02909em 0.05248em 0 #242423, 0.03272em 0.05904em 0 #242423, 0.03636em 0.0656em 0 #242423, 0.04em 0.07216em 0 #242423, 0.04363em 0.07872em 0 #242423, 0.04727em 0.08528em 0 #242423, 0.05091em 0.09184em 0 #242423, 0.05454em 0.09839em 0 #242423, 0.05818em 0.10495em 0 #242423, 0.06181em 0.11151em 0 #242423, 0.06545em 0.11807em 0 #242423, 0.06909em 0.12463em 0 #242423, 0.07272em 0.13119em 0 #242423, 0.07636em 0.13775em 0 #242423, 0.07999em 0.14431em 0 #242423, 0.08363em 0.15087em 0 #242423, 0.08727em 0.15743em 0 #242423, 0.0909em 0.16399em 0 #242423, 0.09454em 0.17055em 0 #242423, 0.09817em 0.17711em 0 #242423, 0.10181em 0.18367em 0 #242423, 0.10545em 0.19023em 0 #242423, 0.10908em 0.19679em 0 #242423, 0.11272em 0.20335em 0 #242423, 0.11635em 0.20991em 0 #242423, 0.11999em 0.21647em 0 #242423, 0.12363em 0.22303em 0 #242423, 0.12726em 0.22959em 0 #242423, 0.1309em 0.23615em 0 #242423, 0.13453em 0.24271em 0 #242423, 0.13817em 0.24927em 0 #242423, 0.14181em 0.25583em 0 #242423, 0.14544em 0.26239em 0 #242423, 0.14908em 0.26895em 0 #242423, 0.15272em 0.27551em 0 #242423, 0.15635em 0.28206em 0 #242423, 0.15999em 0.28862em 0 #242423, 0.16362em 0.29518em 0 #242423, 0.16726em 0.30174em 0 #242423, 0.1709em 0.3083em 0 #242423, 0.17453em 0.31486em 0 #242423, 0.17817em 0.32142em 0 #242423, 0.1818em 0.32798em 0 #242423, 0.18544em 0.33454em 0 #242423, 0.18908em 0.3411em 0 #242423, 0.19271em 0.34766em 0 #242423, 0.19635em 0.35422em 0 #242423, 0.19998em 0.36078em 0 #242423, 0.20362em 0.36734em 0 #242423, 0.20726em 0.3739em 0 #242423, 0.21089em 0.38046em 0 #242423, 0.21453em 0.38702em 0 #242423, 0.21816em 0.39358em 0 #242423, 0.2218em 0.40014em 0 #242423, 0.22544em 0.4067em 0 #242423, 0.22907em 0.41326em 0 #242423, 0.23271em 0.41982em 0 #242423, 0.23634em 0.42638em 0 #242423, 0.23998em 0.43294em 0 #242423, 0.24362em 0.4395em 0 #242423, 0.24725em 0.44606em 0 #242423, 0.25089em 0.45262em 0 #242423, 0.25453em 0.45918em 0 #242423, 0.25816em 0.46573em 0 #242423, 0.2618em 0.47229em 0 #242423, 0.26543em 0.47885em 0 #242423, 0.26907em 0.48541em 0 #242423, 0.27271em 0.49197em 0 #242423, 0.27634em 0.49853em 0 #242423, 0.27998em 0.50509em 0 #242423, 0.28361em 0.51165em 0 #242423, 0.28725em 0.51821em 0 #242423, 0.29089em 0.52477em 0 #242423, 0.29452em 0.53133em 0 #242423, 0.29816em 0.53789em 0 #242423, 0.30179em 0.54445em 0 #242423, 0.30543em 0.55101em 0 #242423, 0.30907em 0.55757em 0 #242423, 0.3127em 0.56413em 0 #242423, 0.31634em 0.57069em 0 #242423, 0.31997em 0.57725em 0 #242423, 0.32361em 0.58381em 0 #242423, 0.32725em 0.59037em 0 #242423, 0.33088em 0.59693em 0 #242423, 0.33452em 0.60349em 0 #242423, 0.33815em 0.61005em 0 #242423, 0.34179em 0.61661em 0 #242423, 0.34543em 0.62317em 0 #242423, 0.34906em 0.62973em 0 #242423, 0.3527em 0.63629em 0 #242423, 0.35634em 0.64285em 0 #242423, 0.35997em 0.64941em 0 #242423, 0.36361em 0.65596em 0 #242423; }
+
+/* line 400, styles.css.scss */
+.proj-btn {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%; }
+  /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .proj-btn:last-child {
+    margin-right: 0; }
+  @media (min-width: 700px) {
+    /* line 400, styles.css.scss */
+    .proj-btn {
+      margin: 0 auto 13vh auto;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-left: 25.58941%; }
+      /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .proj-btn:last-child {
+        margin-right: 0; } }
+  @media (min-width: 1024px) {
+    /* line 400, styles.css.scss */
+    .proj-btn {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-left: 34.11922%; }
+      /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .proj-btn:last-child {
+        margin-right: 0; } }
+
+/* line 414, styles.css.scss */
+.browser-window {
+  padding-top: 30px;
+  border-radius: 6px;
+  border: solid 1px #242423;
+  position: relative;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-left: 8.5298%; }
+  /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .browser-window:last-child {
+    margin-right: 0; }
+  /* line 421, styles.css.scss */
+  .browser-window .frame {
+    display: block;
+    height: 12px;
+    position: absolute;
+    top: 9px;
+    left: 1px; }
+    /* line 427, styles.css.scss */
+    .browser-window .frame span {
+      height: 12px;
+      width: 12px;
+      border-radius: 12px;
+      border: 1px solid #242423;
+      float: left;
+      margin: 0 0 0 5px; }
+  /* line 436, styles.css.scss */
+  .browser-window .browser-content {
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #242423; }
+    /* line 439, styles.css.scss */
+    .browser-window .browser-content img {
+      display: block; }
+
+/* line 446, styles.css.scss */
+.embed-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: 100%; }
+
+/* line 446, styles.css.scss */
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* line 449, styles.css.scss */
+.big-video, .browser-window {
+  margin-bottom: 5vh; }
+  @media (min-width: 480px) {
+    /* line 449, styles.css.scss */
+    .big-video, .browser-window {
+      margin-bottom: 10vh; } }
+
+/* line 458, styles.css.scss */
+.bg-fill {
+  padding: 5vh 0;
+  margin-bottom: 5vh; }
+  @media (min-width: 700px) {
+    /* line 458, styles.css.scss */
+    .bg-fill {
+      padding: 20vh 0;
+      margin-bottom: 10vh; } }
+
+/* line 467, styles.css.scss */
+.frame-block {
+  background-color: none; }
+  /* line 471, styles.css.scss */
+  .frame-block .row1, .frame-block .row2, .frame-block .row3 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .frame-block .row1:last-child, .frame-block .row2:last-child, .frame-block .row3:last-child {
+      margin-right: 0; }
+  /* line 474, styles.css.scss */
+  .frame-block img {
+    margin-bottom: 1em; }
+  @media (min-width: 480px) {
+    /* line 478, styles.css.scss */
+    .frame-block img {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-bottom: 0; }
+      /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .frame-block img:last-child {
+        margin-right: 0; }
+    /* line 482, styles.css.scss */
+    .frame-block .row1, .frame-block .row2 {
+      margin-bottom: 2.35765%; } }
+  @media (min-width: 700px) {
+    /* line 487, styles.css.scss */
+    .frame-block .size5 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 40.29137%; }
+      /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .frame-block .size5:last-child {
+        margin-right: 0; }
+    /* line 490, styles.css.scss */
+    .frame-block .size7 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 57.35098%; }
+      /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .frame-block .size7:last-child {
+        margin-right: 0; }
+    /* line 493, styles.css.scss */
+    .frame-block .row1, .frame-block .row3 {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end; }
+    /* line 498, styles.css.scss */
+    .frame-block .row3 {
+      align-items: flex-start;
+      flex-direction: row-reverse; }
+      /* line 501, styles.css.scss */
+      .frame-block .row3 .size7 {
+        margin-right: 0;
+        margin-left: auto; } }
+
+/* line 512, styles.css.scss */
+.img-caption-R, .img-caption-L {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-left: 0%;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start; }
+  /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .img-caption-R:last-child, .img-caption-L:last-child {
+    margin-right: 0; }
+  /* line 520, styles.css.scss */
+  .img-caption-R img, .img-caption-L img {
+    margin-bottom: 1em; }
+  /* line 523, styles.css.scss */
+  .img-caption-R p.caption, .img-caption-R .projects .content ol.caption, .projects .content .img-caption-R ol.caption, .img-caption-L p.caption, .img-caption-L .projects .content ol.caption, .projects .content .img-caption-L ol.caption {
+    margin-left: 0; }
+    /* line 525, styles.css.scss */
+    .img-caption-R p.caption b, .img-caption-R .projects .content ol.caption b, .projects .content .img-caption-R ol.caption b, .img-caption-L p.caption b, .img-caption-L .projects .content ol.caption b, .projects .content .img-caption-L ol.caption b {
+      font-family: "GT Sectra Fine", "Cooper Black", serif;
+      font-weight: bold; }
+  @media (min-width: 700px) {
+    /* line 512, styles.css.scss */
+    .img-caption-R, .img-caption-L {
+      flex-flow: row;
+      align-items: center;
+      justify-content: space-between; }
+      /* line 534, styles.css.scss */
+      .img-caption-R img, .img-caption-L img {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+        .img-caption-R img:last-child, .img-caption-L img:last-child {
+          margin-right: 0; }
+      /* line 537, styles.css.scss */
+      .img-caption-R p.caption, .img-caption-R .projects .content ol.caption, .projects .content .img-caption-R ol.caption, .img-caption-L p.caption, .img-caption-L .projects .content ol.caption, .projects .content .img-caption-L ol.caption {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+        .img-caption-R p.caption:last-child, .img-caption-R .projects .content ol.caption:last-child, .projects .content .img-caption-R ol.caption:last-child, .img-caption-L p.caption:last-child, .img-caption-L .projects .content ol.caption:last-child, .projects .content .img-caption-L ol.caption:last-child {
+          margin-right: 0; } }
+  @media (min-width: 1024px) {
+    /* line 542, styles.css.scss */
+    .img-caption-R img, .img-caption-L img {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 57.35098%; }
+      /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .img-caption-R img:last-child, .img-caption-L img:last-child {
+        margin-right: 0; }
+    /* line 545, styles.css.scss */
+    .img-caption-R p.caption, .img-caption-R .projects .content ol.caption, .projects .content .img-caption-R ol.caption, .img-caption-L p.caption, .img-caption-L .projects .content ol.caption, .projects .content .img-caption-L ol.caption {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-left: 8.5298%; }
+      /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .img-caption-R p.caption:last-child, .img-caption-R .projects .content ol.caption:last-child, .projects .content .img-caption-R ol.caption:last-child, .img-caption-L p.caption:last-child, .img-caption-L .projects .content ol.caption:last-child, .projects .content .img-caption-L ol.caption:last-child {
+        margin-right: 0; } }
+
+@media (min-width: 700px) {
+  /* line 551, styles.css.scss */
+  .img-caption-L {
+    flex-flow: row-reverse; }
+    /* line 554, styles.css.scss */
+    .img-caption-L img {
+      margin-right: 0; }
+    /* line 557, styles.css.scss */
+    .img-caption-L p.caption, .img-caption-L .projects .content ol.caption, .projects .content .img-caption-L ol.caption {
+      margin-right: auto;
+      margin-left: 0; } }
+
+/* line 569, styles.css.scss */
+.images-2up-a {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin: 8vh auto 10vh auto;
+  display: flex;
+  flex-flow: column; }
+  /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .images-2up-a:last-child {
+    margin-right: 0; }
+  /* line 574, styles.css.scss */
+  .images-2up-a .img-1, .images-2up-a .img-2 {
+    max-width: 100%;
+    max-height: 100%; }
+  /* line 578, styles.css.scss */
+  .images-2up-a .img-1 {
+    margin-bottom: 1em; }
+  @media (min-width: 700px) {
+    /* line 569, styles.css.scss */
+    .images-2up-a {
+      flex-flow: row;
+      align-items: flex-start; }
+      /* line 584, styles.css.scss */
+      .images-2up-a .img-1 {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%;
+        margin-bottom: 0; }
+        /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+        .images-2up-a .img-1:last-child {
+          margin-right: 0; }
+      /* line 588, styles.css.scss */
+      .images-2up-a .img-2 {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        margin-left: auto;
+        padding-top: 15vh; }
+        /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+        .images-2up-a .img-2:last-child {
+          margin-right: 0; } }
+
+/* line 596, styles.css.scss */
+.images-2up-equal {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start; }
+  /* line 89, ../../../../.rvm/gems/ruby-2.3.3/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .images-2up-equal:last-child {
+    margin-right: 0; }
+  /* line 604, styles.css.scss */
+  .images-2up-equal img {
+    width: 83%; }
+  @media (min-width: 700px) {
+    /* line 596, styles.css.scss */
+    .images-2up-equal {
+      justify-content: space-between; }
+      /* line 609, styles.css.scss */
+      .images-2up-equal img {
+        width: 41.67%; }
+      /* line 612, styles.css.scss */
+      .images-2up-equal .img-1 {
+        padding-top: 15vh; } }
+
+/* line 618, styles.css.scss */
+.images-2up-equal + .images-2up-equal {
+  margin-top: 0; }

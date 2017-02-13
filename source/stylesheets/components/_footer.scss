@@ -5,33 +5,14 @@
 }
 
 footer {
-  a {
-    display: inline-block;
-    text-decoration: none;
-    position: relative;
-    box-shadow: none;
-    transition: all .35s .25s ease-in-out;
-  }
-
-  a::after {
-    content: '';
-    position: absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width: 0;
-    left: 0;
-    height: 25%;
-    background: $accent;
-    transition:width 0.25s ease-in;
-    //z-index: -1;
-  }
-
-  a:hover {
-    //color: $accent;
-  }
-
-  a:hover::after {
-    width: 100%;
+  color: $white;
+  @extend section;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  min-height: 30vh;
+  h2 {
+    margin-bottom: .5em;
+    color: $white;
   }
   $footer-link-sizes: (
     null  : (20px, .97),
@@ -39,40 +20,41 @@ footer {
     medium: (25px),
     large : (27px),
   );
-  color: $white;
-  @extend section;
-  margin-top: 20vh;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  min-height: 30vh;
   .links {
     display: flex;
     flex-direction: column;
     .other {
       a {
-        font-family: $cooper;
-        font-weight: 400;
-        @include font-size($footer-link-sizes);
-        box-shadow: none;
+        @include font-size($p-font-sizes);
+        font-weight: bold;
+      }
+      .prev {
+        margin-bottom: 1.5em;
+      }
+      .prev a:hover {
+        margin-left: -.7em;
       }
       ul {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       list-style: none;
-      margin: 1em 0 1em 0;
+      margin: 1em 0 2em 0;
       padding: 0;
         li {
         display: inline-block;
-        margin-bottom: 1.5em;
-        margin-right: 5%;
+        margin-bottom: .5em;
+        //margin-right: 5%;
         flex: 0 0 45%;
         }
       }
     }
     .next {
-      //@include span-columns(12);
-      text-align: right;
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+    .next h2 a:hover {
+      margin-right: -.3em;
     }
   }
   .copy {
@@ -84,7 +66,6 @@ footer {
    display: none;
   }
   @include respond-to('medium') {
-    margin-top: 30vh;
     padding-top: 10vh;
     padding-bottom: 5vh;
     .links {
@@ -97,6 +78,7 @@ footer {
           margin-right: auto;
         }
       .next {
+        text-align: right;
         }
     }
     .toplink {

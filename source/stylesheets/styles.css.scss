@@ -17,12 +17,14 @@ html {
 }
 
 ::selection {
-  background: rgba($accent,.75);
+  background: rgba($main, .85);
+  color: $c1;
+  opacity: 1;
 }
 
 body {
-  background: $white center center no-repeat fixed;
-  font-family: $work;
+  background: $white;
+  font-family: $sneak;
   color: $black;
 }
 
@@ -33,66 +35,84 @@ body {
 }
 
 h1 {
-  font-family: $cooper;
+  font-family: $sectrafine;
   @include font-size($h1-font-sizes);
-  text-align: center;
   letter-spacing: -.01em;
-  font-weight: 400;
+  font-weight: normal;
+  margin-bottom: .4em;
+  color: $black;
+  span {
+    font-family: $sneak;
+    //color: $main;
+    font-weight: bold;
+  }
 }
 
 h2 {
-  font-family: $cooper;
+  font-family: $sneak;
   @include font-size($h2-font-sizes);
-  letter-spacing: -.01em;
-  font-weight: 400;
 }
 
 h3 {
+  text-align: center;
   @include font-size($h3-font-sizes);
+  letter-spacing: -.02em;
+  color: rgba($black, .5);
+  margin: 0;
 }
 
 h5 {
-  font-family: $cooper;
-  @include font-size($h5-font-sizes);
-  font-weight: 400;
+  font-family: $sneak;
+  @include font-size($h3-font-sizes);
+  font-weight: bold;
+  //text-transform: uppercase;
 }
 
 h6 {
-  font-family: $cooper;
+  font-family: $sneak;
   font-weight: bold;
   @include font-size($h6-font-sizes);
   margin-bottom: .2em;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 p {
   @include font-size($p-font-sizes);
-  font-family: $work;
+  font-family: $sneak;
+  margin-bottom: 1em;
 }
 
 p.emph {
-  font-family: $work;
+  font-family: $sectrafine;
   @include font-size($emph-font-sizes);
-  font-weight: 300;
+  color: rgba($black, .5);
+}
+
+p.credits {
+  @include font-size($small-font-sizes);
+  text-align: center;
+  color: rgba($black, .5);
 }
 
 p.blockquote {
   text-indent: -.5em;
 }
 
-p .lead {
-  font-family: $cooper;
-}
-
 small {
-  font-family: $work;
+  font-family: $sneak;
   @include font-size($small-font-sizes);
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  box-shadow: inset 0 -1px 0 $white, inset 0 -2px 0 $black;
+  box-shadow: inset 0 -.06em 0 $main;
+  transition: all .2s ease-out;
+}
+
+a:hover {
+  color: #fff;
+  box-shadow: inset 0 -1.15em 0 $main;
 }
 
 section {
@@ -112,73 +132,18 @@ section {
 @import "components/footer";
 
 
-.intro-bg {
-  width: 100%;
-  background: no-repeat center center;
-  background-size: cover;
-}
-
-.intro {
-  display: flex;
-  align-items: center;
-  min-height: 60vh;
-  margin-bottom: 5vh;
-  text-align: center;
-  .casing {
-    flex: 0 0 100%;
-  }
-  h1, h2 {
-    @include span-columns(12);
-    color: #fff;
-    text-shadow: long-shadow(
-      $direction: 23deg,
-      $length: .15em,
-      $color: $black,
-      $fade: $black
-    );
-    -webkit-text-stroke: 1px $black;
-  }
-  h2 {
-    text-align: leeft;
-    margin-bottom: .2em;
-  }
-  @include respond-to('medium') {
-    min-height: 80vh;
-    margin-bottom: 10vh;
-    h1, h2 {
-      @include span-columns(10);
-      @include shift(1);
-      -webkit-text-stroke: 2px $black;
-    }
-  }
-  @include respond-to('large') {
-    min-height: 100vh;
-    h1, h2 {
-      -webkit-text-stroke: 3px $black;
-    }
-  }
-}
-
 .index {
-  .intro {
-    //min-height: 50vh;
-    //padding-top: 20vh;
-  }
-  .opening-remarks {
-    text-align: left;
-    .emph {
-      margin-top: 0;
-      span {
-        font-family: $cooper;
-      }
+  .custom {
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5em;
     }
   }
   @include respond-to('medium') {
-    .opening-remarks {
-      p {
-        text-align: center;
-        @include span-columns(10);
-        @include shift(1);
+    .custom {
+      h2 {
+        @include span-columns(8);
+        @include shift(2);
       }
     }
   }
@@ -199,62 +164,198 @@ section {
   }
 }
 
-.dark-bg {
-  background-color: $black;
-  color: $white;
-  padding-top: 10vh;
-  padding-bottom: 5vh;
-}
-
 .projects {
   .content {
     section {
-      margin-bottom: 15vh;
+      margin-bottom: 7.5vh;
+      p:last-of-type {
+        margin-bottom: 3em;
+      }
+      p.emph:last-of-type {
+        margin-bottom: 1.5em;
+      }
+      div:last-of-type {
+        margin-bottom: 5vh;
+      }
+      ol:last-of-type {
+        margin-bottom: 1em;
+      }
+      .proj-btn:last-of-type {
+        margin-bottom: 4.5em;
+      }
     }
-    h3, h5 {
-      margin-bottom: .5em;
-      //text-align: center;
+    h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    h5 {
+      margin-bottom: .9em;
       @include span-columns(12);
     }
-    .inline-video {
+    p + h5 {
+      margin-top: 3em;
+    }
+    h6 {
+      margin-top: 1em;
+    }
+    .inline-video, p {
       @include span-columns(12);
     }
     p.emph {
-      margin-top: .2em;
-      margin-bottom: 1em;
+      margin-top: .5em;
+      margin-bottom: .8em;
+    }
+    p.credits {
+      width: 100%;
+      margin: .5em auto 3em auto;
+    }
+    ol {
+      @extend p;
+      @include font-size($h3-font-sizes);
+      font-weight: normal;
+      text-align: left;
+      margin: .2em auto 1.5em auto;
+      padding: 0;
+      li {
+        margin-bottom: 1em;
+      }
     }
     img {
       max-width: 100%;
     }
     p + img, p + p img, .inline-video {
-      margin-top: 10vh;
-      margin-bottom: 5vh;
+      margin-top: 3em;
     }
-    .problem {
-      h3, p.lead {
-        text-align: center;
-      }
-      p.lead {
+    img + p {
+      margin-top: 3em;
+    }
+    img + h5 {
+      margin-top: 1.5em;
+    }
+    .problem p.emph  {
+      color: $white;
+      margin-top: 1em;
+    }
+    .learned {
+      background-color: $main;
+      color: $white;
+      //padding-top: 10vh;
+      padding-bottom: 5vh;
+      p.emph {
+        color: $c1;
         margin-top: 0;
+        margin-bottom: .5em;
       }
     }
     @include respond-to('small') {
-      h3, p, h5, h6, .inline-video {
+      h2, p, h5, h6, .inline-video {
         @include span-columns(10);
         @include shift(1);
       }
     }
     @include respond-to('medium') {
-      p, h3, h5, h6, .inline-video {
+      h2, h5, p, .inline-video, .img-6 {
         @include span-columns(8);
         @include shift(2);
       }
     }
     @include respond-to('large') {
-
+      h5, p, .inline-video, .img-6 {
+        @include span-columns(6);
+        @include shift(3);
+      }
+      p.emph {
+        @include span-columns(7);
+        @include shift(5);
+      }
+      .learned p {
+        @include span-columns(7);
+        @include shift(5);
+      }
+      p.left {
+        @include shift(1);
+      }
+      ol {
+        @include shift(3);
+        @include span-columns(9);
+      }
     }
   }
 }
+
+
+
+.projects_index {
+  .brief {
+    margin-bottom: 20vh;
+  }
+  h1 {
+    color: rgba($black, .5);
+    span {
+      color: $black;
+    }
+  }
+  h2 {
+    margin-bottom: 1em;
+  }
+  .proj-row p {
+    font-weight: bold;
+    text-align: left;
+    margin-top: .2em;
+    line-height: 1.2;
+  }
+  .proj-row p span {
+    @include font-size($small-font-sizes);
+    color: rgba($black, .5);
+    display: inline-block;
+    font-weight: normal;
+  }
+  .proj-row a {
+    box-shadow: none;
+  }
+
+  .project3, .project4, .project5, .project6, .project8 {
+    margin-bottom: 2.35765%;
+    img {
+      max-width: 100%;
+    }
+  }
+  @include respond-to('small') {
+    .project3, .project4, .project5, .project6, .project8 {
+      @include span-columns(10);
+      @include shift(1);
+    }
+  }
+
+  @include respond-to('medium') {
+    .project3, .project4, .project5, .project6, .project8 {
+      margin-bottom: 10vh;
+    }
+    .project3 {
+      @include span-columns(3);
+      margin-right: 8.5298% + 2.35765%;
+      @include shift(0);
+    }
+    .project4 {
+      @include span-columns(4);
+      @include shift(2);
+      @include omega;
+    }
+    .project5 {
+      @include span-columns(5);
+      @include shift(5);
+    }
+    .project6 {
+      @include span-columns(6);
+      @include shift(0);
+    }
+    .project8 {
+      @include span-columns(8);
+      @include shift(0);
+    }
+  }
+}
+
 
 //############################################
 //#################COMPONENTS#################
@@ -262,16 +363,17 @@ section {
 
 //brief component
 .brief {
+  padding-top: 20vh;
   margin-bottom: 5vh;
-  small {
-    font-family: $work;
-  }
   h6 {
     @include font-size($small-font-sizes);
   }
-  .emph {
+  h3 {
+    line-height: 1.4;
     @include span-columns(12);
     margin-bottom: 5vh;
+    font-weight: normal;
+    text-align: left;
   }
   .role {
     margin-bottom: 3vh;
@@ -301,6 +403,7 @@ section {
     }
   }
   @include respond-to('medium') {
+    padding-top: 30vh;
     .emph {
       margin-bottom: 10vh;
     }
@@ -319,62 +422,10 @@ section {
     }
   }
   @include respond-to('large') {
-    .role {
-      //@include span-columns(3);
-    }
     .learned {
       @include span-columns(4);
       @include shift(2);
     }
-  }
-}
-
-.btn {
-  @include font-size($h5-font-sizes);
-  font-family: $cooper;
-  text-transform: uppercase;
-  display: block;
-  height: 3.2em;
-  background: $white;
-  border: 1px solid $black;
-  text-align: center;
-  padding: .8em 1.5em;
-  border-radius: 12px;
-  box-shadow: long-shadow(
-    $direction: 36deg,
-    $length: .5em,
-    $color: $black,
-    $fade: $black
-  );
-  transition: all .3s ease-in-out;
-  @include respond-to('medium') {
-    border-width: 2px;
-  }
-  @include respond-to('large') {
-    border-width: 3px;
-  }
-}
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: long-shadow(
-    $direction: 29deg,
-    $length: .75em,
-    $color: $black,
-    $fade: $black
-  );
-}
-
-.proj-btn {
-  margin: 5vh auto 10vh auto;
-  @include span-columns(8);
-  @include shift(2);
-  @include respond-to('medium') {
-    @include span-columns(6);
-    @include shift(3);
-  }
-  @include respond-to('large') {
-    @include span-columns(4);
-    @include shift(4);
   }
 }
 
@@ -383,8 +434,6 @@ section {
   border-radius: 6px;
   border: solid 1px $black;
   position: relative;
-  @include span-columns(10);
-  @include shift(1);
   .frame {
     display: block;
     height: 12px;
@@ -409,32 +458,128 @@ section {
   }
 }
 
+.full-window {
+  @include span-columns(10);
+  @include shift(1);
+}
+
+.btn {
+  text-align: center;
+  color: $black;
+  font-weight: bold;
+  width: 300px;
+  height: 3.5em;
+  position: relative;
+}
+
+.btn-content {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 3.5;
+  border: 2px solid $black;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.btn:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  border: 2px solid $black;
+  border-radius: 2px;
+  transition: all .3s ease;
+}
+
+.btn:hover .btn-content {
+  background: #fff;
+  color: $main;
+  box-shadow: none;
+  transform: translate(-2px, -4px);
+}
+
+.btn:hover::before {
+  background: $main;
+}
+
+
+.proj-btn {
+  .btn {
+    margin: 0 auto;
+  }
+  @include span-columns(12);
+}
+
 //video playback
-.embed-container { position: relative; height: 0; overflow: hidden; max-width: 100%; height: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.embed-container { position: relative; height: 0; overflow: hidden; max-width: 100%; height: 100%; margin-bottom: 0 !important; z-index: 2;} .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;}
 
 
-.big-video, .browser-window {
+.big-video, .full-window, .proj-btn {
   margin-bottom: 5vh;
   @include respond-to('small') {
     margin-bottom: 10vh;
   }
 }
 
-// ##################  BIG FRAME SEQUENCE  ########################
 
-.bg-fill {
-  padding: 5vh 0;
-  margin-bottom: 5vh;
-  @include respond-to('medium') {
-    padding: 10vh 0;
-    margin-bottom: 10vh;
+//#################################################
+
+//################  BACKGROUND: STYLES;  #########################
+
+//####################################################
+
+.dark-bg, .black-bg, .white-bg {
+  section:last-of-type {
+    margin-bottom: 0;
   }
+}
+
+.dark-bg {
+  background-color: $black;
+  color: $white;
+  h3 {
+    color: $white;
+  }
+}
+
+.black-bg {
+  background-color: #11100F;
+  color: $white;
+  h3 {
+    color: $white;
+  }
+}
+
+.white-bg {
+  background-color: #fff;
+}
+
+.padded-bg {
+  padding: 5vh 0;
+  //margin-bottom: 5vh;
+  @include respond-to('medium') {
+    padding: 15vh 0;
+    //margin-bottom: 10vh;
+  }
+}
+
+.split {
+  padding-top: 15vh;
+  padding-bottom: 3em;
+  margin-bottom: 0;
+}
+
+.flush {
+  margin-bottom: 0;
 }
 
 .frame-block {
   background-color: none;
-  @include outer-container;
-  padding: 0 1em;
   .row1, .row2, .row3 {
     @include span-columns(12);
   }
@@ -446,7 +591,7 @@ section {
       @include span-columns(6);
       margin-bottom: 0;
     }
-    .row1, .row2 {
+    .row1, .row2, .row3 {
       margin-bottom: 2.35765%;
     }
   }
@@ -460,12 +605,12 @@ section {
     .row1, .row3 {
       display: flex;
       flex-direction: row;
-      align-items: flex-end;
+      align-items: center;
     }
     .row3 {
-      align-items: flex-start;
+      align-items: center;
       flex-direction: row-reverse;
-      .size7 {
+      img:first-of-type {
         margin-right: 0;
         margin-left: auto;
       }
@@ -473,43 +618,60 @@ section {
   }
 }
 
+.megagrid img {
+  margin-bottom: 1.3%;
+}
+
 
 
 //############  CAPTIONS  #################
 .img-caption-R, .img-caption-L {
-  @include span-columns(10);
-  @include shift(1);
-  margin-top: 10vh;
-  margin-bottom: 5vh;
+  @include span-columns(12);
+  @include shift(0);
+  //margin-top: 10vh;
+  //margin-bottom: 5vh;
   display: flex;
   flex-flow: column;
   align-items: flex-start;
-  img {
+  .contents {
+    @include span-columns(12);
     margin-bottom: 1em;
   }
-  p.caption {
+  .caption {
     margin-left: 0;
-    b {
-      font-family: $cooper;
-      font-weight: normal;
+    p, h5 {
+      @include shift(0);
+      @include span-columns(12);
     }
+    p:last-of-type {
+      margin-bottom: 0 !important;
+    }
+  }
+  p.credits {
+    margin-bottom: 0 !important;
   }
   @include respond-to('medium') {
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
-    img {
-      @include span-columns(7);
+    .contents {
+      @include span-columns(6);
     }
-    p.caption {
-      @include span-columns(4);
+    .caption {
+      @include span-columns(5);
     }
   }
   @include respond-to('large') {
-    img {
+    .contents {
+      @include span-columns(5);
+    }
+    .six {
+      @include span-columns(6)
+    }
+    .caption {
       @include span-columns(6);
     }
-    p.caption {
+    .six + .caption {
       @include span-columns(5);
     }
   }
@@ -517,10 +679,10 @@ section {
 .img-caption-L {
   @include respond-to('medium') {
     flex-flow: row-reverse;
-    img {
+    .contents {
       margin-right: 0;
     }
-    p.caption {
+    .caption {
       margin-right: auto;
       margin-left: 0;
     }
@@ -528,9 +690,31 @@ section {
 }
 
 
-
+//###########################################################
 
 //######################  JUST IMAGES #######################
+
+//###########################################################
+
+.img-10-l, .img-10-r, .img-10-c {
+  @include span-columns(12);
+  @include respond-to('medium') {
+    @include span-columns(10);
+    @include shift(1);
+  }
+}
+
+@include respond-to('medium') {
+  .img-10-l {
+    @include shift(0);
+  }
+
+  .img-10-r {
+    @include shift(2);
+  }
+}
+
+
 // (image, 2up)
 .images-2up-a {
   @include span-columns(12);
@@ -552,31 +736,18 @@ section {
       margin-bottom: 0;
     }
     .img-2 {
-      @include span-columns(4);
+      @include span-columns(6);
       margin-left: auto;
       padding-top: 15vh;
     }
   }
 }
 
-.images-2up-equal {
-  @include span-columns(12);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-bottom: 20vh;
-  img, {
-    width: 83%;
-  }
-  @include respond-to('medium') {
-    justify-content: space-between;
-    img {
-      width: 41.67%;
-    }
-    .img-1 {
-      padding-top: 15vh;
-    }
-  }
+
+.inner-link:before {
+  display: block;
+  content: " ";
+  margin-top: -15vh;
+  height: 15vh;
+  visibility: hidden;
 }

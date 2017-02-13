@@ -1,27 +1,28 @@
 <% wrap_layout :default do %>
 
 
-<div class="intro-bg" style="background-image: url('<%=current_page.url %>hero.jpg')">
+<!--<div class="intro-bg" style="background-image: url('<%=current_page.url %>hero.jpg')">
   <section class="intro">
     <div class="casing" style="color: #<%=current_page.data.theme_color %>">
       <h2><%=current_page.data.head1 %></h2>
       <h1><%=current_page.data.head2 %></h1>
     </div>
   </section>
-</div>
+</div>-->
 
 
 <section class="brief">
-  <p class="emph"><%=current_page.data.summary %></p>
-    <div class="role">
+  <h1><%=current_page.data.head %></h1>
+  <h3><%=current_page.data.summary %></h3>
+  <!--  <div class="role">
       <h6>My Role:</h6>
       <small><%=current_page.data.role %></small>
     </div>
     <div class="learned">
-      <h6>What I learned:</h6>
-  
+      <h6>What I Learned:</h6>
+
         <small> <%=current_page.data.learned %></small>
-    </div>
+    </div>-->
 </section>
 
 

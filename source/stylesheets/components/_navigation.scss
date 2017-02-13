@@ -1,5 +1,5 @@
-nav.navigation {
-  mix-blend-mode: exclusion;
+nav.navigation, nav.footer {
+  //mix-blend-mode: exclusion;
   pointer-events: none;
   z-index: 3;
   display: flex;
@@ -14,28 +14,40 @@ nav.navigation {
     margin-left: -600px;
   }
   a {
-    color: $white;
-    box-shadow: none;
+    color: $main;
   }
+
+  a:hover {
+    color: $white;
+  }
+
   .logo {
     pointer-events: all;
     position: fixed;
     float: left;
     display: flex;
+    flex-flow: row;
     align-items: center;
-    img {
-      width: .9em;
-    }
+    box-shadow: none;
     small {
       //margin-left: 1em;
-      font-weight: 400;
-      font-family: $cooper;
+      font-weight: bold;
+      font-family: $sneak;
+      @include font-size($h1-font-sizes);
+    }
+    img {
+      height: .68em;
+      margin-right: .05em;
     }
     border: none;
   }
+  /*.logo:hover {
+    cursor: image_url("hand.png") 25 25, auto;
+  }*/
   .contact {
     pointer-events: all;
     margin-left: auto;
     float: right;
+    font-family: $sneak;
   }
 }

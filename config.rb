@@ -34,6 +34,21 @@ end
 #   end
 # end
 
+
+helpers do
+  def get_page_by_place(place)
+    sitemap.resources.select do |resource|
+      resource.data.place == place
+    end
+  end
+
+  def get_page(title)
+    sitemap.resources.select do |resource|
+      resource.data.title == title
+    end
+  end
+end
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
@@ -50,12 +65,14 @@ activate :directory_indexes
 activate :blog do |blog|
   blog.name = "projects"
   blog.prefix = "projects"
-  blog.permalink = '{namey}.html'
-  blog.sources = '{id}-{namey}.html'
+  blog.permalink = '{pathname}.html'
+  blog.sources = '{place}.html'
 end
 
-activate :blog do |blog|
-  blog.name = "writing"
-  blog.prefix = "writing"
-  blog.layout = "article"
-end
+#activate :blog do |blog|
+#  blog.name = "writing"
+#  blog.prefix = "writing"
+#  blog.layout = "article"
+#end
+
+activate :autoprefixer

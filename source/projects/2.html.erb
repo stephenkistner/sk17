@@ -1,0 +1,213 @@
+---
+layout: case
+
+pathname: metereol
+
+date: 01-01-2017
+
+order: 1
+
+title: "Metereol: A Typographic Weather Visualizer"
+head: "How's the weather feel?"
+summary: 'Metereol is a weather visualizer. Using live weather data, it generates a visual representation of how it feels outside. Working around the limitations of P5.js, I developed a <a href="http://metereol.github.io/app/">functional prototype</a> and published it as a Chrome extension.'
+
+
+role: "I designed & built Metereol in just 3 weeks. I constructed a visual system that represents weather data, worked around the limitations of P5.js, and published an extension on the Chrome web store."
+learned: "Setbacks are inevitable. Determining which problems to solve and which to work around is essential to delivering a solid product."
+
+---
+
+
+<section style="margin-bottom: 0">
+<div class="browser-window full-window">
+  <div class="frame">
+        <span></span>
+        <span></span>
+        <span></span>
+  </div>
+    <div class='color-fix embed-container browser-content' style="padding-bottom: 57.73%"> <!--DEFAULT 56.25 -->
+      <iframe class="hidecontrols"  src='https://player.vimeo.com/video/201946520?title=0&byline=0&portrait=0&autoplay=1&loop=1' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    </div>
+</div>
+
+<div class="proj-btn">
+  <div class="btn">
+  <a class="btn-content" href="http://metereol.github.io/app/">View Live App</a>
+  </div>
+</div>
+
+</section>
+
+
+<div class="black-bg flush" style="background-color: #000;">
+<section style="padding-top:0; margin: 0 auto;">
+  <%= image_tag "big4.png", :class => "img-10-c" %>
+</section>
+</div>
+
+<div class="white-bg padded-bg flush">
+<section>
+  <%= image_tag "big1.png", :class => "img-10-c" %>
+</section>
+</div>
+
+<div class="black-bg flush" style="background-color: #000;">
+<section style="padding-top:0; margin: 0 auto;">
+  <%= image_tag "big3.png", :class => "img-10-c" %>
+</section>
+</div>
+
+<div class="white-bg padded-bg flush">
+<section>
+<div class="images-2up-shift">
+  <%= image_tag "big2.png", :class => "img-10-c" %>
+</div>
+</section>
+</div>
+
+
+<div class="split">
+  <h3>The Idea</h3>
+</div>
+
+<section>
+<!--<h5>The Challenge</h5>-->
+<h2>You can't feel numbers.</h2>
+<p>The feeling of hot air against the skin. The sight of storm clouds looming on the horizon. The weather isn't numbers and data. <b>It's a complex combination of sensory inputs.</b></p>
+
+<p>Numbers effectively communicate precise data sets, but fail to convey the more nuanced sensations they represent. But paintings and other visual artifacts transcend the visual, transporting us to new realms of thought and feeling.</p>
+
+<p class="emph">Can live weather data exist as a dynamic, visual system?</p>
+
+</section>
+
+<section>
+<%= image_tag "temps.png" %>
+</section>
+
+
+<div class="split white-bg">
+  <h3>The Approach</h3>
+</div>
+
+<div class="white-bg">
+<section>
+<h2>Weather as Language</h2>
+
+<p>I wanted to make something that operated as both a functional tool and a visual experience. To be useful, the system needed structure. Creating a consistent visual language would ensure... By using each data point like a word in a sentence, I could convey complex weather conditions through just a few components.</p>
+
+<p class="emph">Thinking of weather as a language permitted clarity through consistency</p>
+</section>
+</div>
+
+<div class="split">
+  <h3>The Process</h3>
+</div>
+
+
+<section>
+  <h2>Building a Holistic System</h2>
+  <p>How it feels outside depends on more than just temperature. A gentle breeze transforms an unbearable stew of heat and sweat into a pleasant summer afternoon. Like switching a word in a sentence, one small change affects the entire system's meaning.</p>
+  <p class="emph left">At every stage, looking at both the parts and the whole was imperative.</p>
+
+<div class="img-caption-L">
+  <div class="contents six">
+    <%= image_tag "sketches2.png"%>
+  </div>
+  <div class="caption">
+    <h5>Distilling Feeling</h5>
+    <p>Putting pen to paper let me quickly visualize how different weather conditions felt. I was searching for the essence of each sensation.</p>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="img-caption-R">
+  <div class="contents">
+  <div class='embed-container' style="padding-bottom: 66.667%"> <!--DEFAULT 56.25 -->
+    <iframe class="hidecontrols"  src='https://player.vimeo.com/video/203304617?autoplay=1&loop=1&title=0&byline=0&portrait=0' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+  </div>
+  <div class="caption">
+  <h5>Establishing Limits</h5>
+  <p>To make the system more manageable, I limited my exploration to four key data points. Together, these metrics reflected most weather conditions without overcomplicating the system.</p>
+  </div>
+</div>
+
+</section>
+
+<section>
+<%= image_tag "illy.jpg"%>
+<h5>Everything at Once</h5>
+<p>Working digitally, I explored how color and form affected the system. Working with vectors also enabled me to think about how each part would translate into code.</p>
+</section>
+
+<section>
+<div class="img-caption-R">
+  <div class="contents">
+    <%= image_tag "type.png"%>
+  </div>
+  <div class="caption">
+    <h5>The Typography</h5>
+    <p>I chose Calibre Black as the system’s typeface. The letterform's small counters and high legibility allowed them to act as containers for the visuals without sacrificing readability.</p>
+  </div>
+</div>
+</section>
+
+<section>
+<%= image_tag "processing.jpg"%>
+
+<h5>Working with Code</h5>
+
+<p>Using Processing, I started outlining the system's motion. Ultimately the project would live online, but I was most familiar with Processing, and it let me prototype quickly.</p>
+
+  <!--<p class="emph left">Everything fell apart when I masked the temperature wave inside the type. </p>-->
+</section>
+
+<div class="dark-bg" style="margin-bottom: 15vh; padding-top: 3em;">
+<section>
+  <h5>Troubleshooting</h5>
+
+  <p>On its own, the temperature wave moved as intended. But when I combined it with the typography, the frame rate would plummet as soon as the program launched.</p>
+
+  <p>The issue occurred because image masks were redrawn each frame. Old masks weren't purged from the system's memory. Rather than treating the mask like a container, I reversed it, making it a flat layer that sits on top of the wave.</p>
+</section>
+</div>
+
+<section>
+  <div class="img-caption-R">
+    <div class="contents six">
+      <div class="browser-window">
+        <div class="frame">
+              <span></span>
+              <span></span>
+              <span></span>
+        </div>
+          <div class='browser-content' style="margin-bottom: 0">
+            <%= image_tag "window.png"%>
+          </div>
+      </div>
+    </div>
+    <div class="caption">
+      <h5>Adding an Interface</h5>
+      <p>With precious time spent solving the masking issue, I didn't have as much time to develop Metereol's interface. I put together a quick menu for entering custom locations and hosted the project on Github.</p>
+    </div>
+  </div>
+</section>
+
+<div class="split dark-bg" style="background-color: #405CFF">
+  <h3>What I Learned</h3>
+</div>
+
+<div class="learned">
+<section>
+  <!--<h2>What I Learned</h2>-->
+  <p class="emph left">Know what features are essential. Plan accordingly in the face of setbacks.</p>
+
+  <p class="left">Although I was able to troubleshoot the text-masking issue, it cost me. I had less time to develop the interface of the project.</p>
+
+  <p class="left">The experience of customizing the location could be better. What if it detected a user's location through Google's API? What if it took just a few less clicks to enter a location manually? What if a cookie stored the entered data for subsequent visits?</p>
+
+  <p class="left">Maybe I could have ditched the temperature wave to tackle these problems, but I decided it was essential to the system. Overall, I feel I made the right decision, and plan to improve the usability in future iterations.</p>
+</section>
+</div>

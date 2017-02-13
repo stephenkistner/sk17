@@ -14,8 +14,6 @@ gem 'middleman-livereload'
 
 gem 'neat'
 
-gem "middleman-blog"
+gem 'middleman-blog'
 
-gem 'nokogiri'
-
-gem "middleman-compass"
+gem 'middleman-autoprefixer'

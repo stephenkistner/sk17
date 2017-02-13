@@ -1,5 +1,11 @@
 @include fontFace('Cooper','/fonts/CooperBlack',normal,normal);
 
+@include fontFace('Souvenir','/fonts/SouvenirStd-Light',normal,normal);
+
+@include fontFace('Usherwood','/fonts/UsherwoodStd-Bold',normal,normal);
+
+@include fontFace('Utopia','/fonts/Utopia-Regular',normal,normal);
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {@font-face {font-family: 'Cooper';
 src: url('/fonts/CooperBlack.svg') format('svg');
 }}

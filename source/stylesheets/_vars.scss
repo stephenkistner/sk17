@@ -1,16 +1,21 @@
 //BRAND COLORS
-$black: #242423;
-$white: #fff;
-$light: #f2f2f2;
-
-$accent: #F5CB5C;
+$black: #0c0b0a;
+$white: #edf7f6;
 
 
+
+$main: #405CFF;
+$yellow: #fff0d3;
+
+$c1: #FF9999;
+$c2: #7AFFB0;
+
+$inverse: #B5A100;
 
 //BRAND FONTS
-$cooper: 'Cooper', "Cooper Black", serif;
-$usherwood: 'Usherwood', Times, "Times New Roman", serif;
-$work: 'Libre Franklin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sectrafine: 'GT Sectra Fine', Times, "Times New Roman", serif;
+//$sectra: 'GT Sectra', Times, "Times New Roman", serif;
+$sneak: 'Sneak Trial', "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 //BREAKPOINTS
 $breakpoints: (
@@ -21,51 +26,19 @@ $breakpoints: (
 
 $tweakpoints: ();
 
-//TYPE PROPORTIONS
-$h1-font-sizes: (
-  null  : (50px, 1.1),
-  small : 80px,
-  medium: (120px),
-  large : (144px),
-);
-
-$h2-font-sizes: (
-  null  : (36px, .95),
-  small : (50px),
-  medium: (60px),
-  large : (72px),
-);
-
-$h3-font-sizes: (
-  null  : (36px, 1),
-  small : (40px),
-  medium: (48px),
-  large : (54px),
-);
-
-$h5-font-sizes:  (
-  null  : (20px, 1.4),
-  small : 23px,
-  medium: (25px, 1.6),
-  large : (27px),
-);
-
-$emph-font-sizes: (
-  null  : (28px, 1.4),
-  small : 30px,
-  medium: (38px),
-  large : (42px),
-);
-
-
 $p-font-sizes: (
   null  : (16px, 1.6),
   small : 17px,
   medium: (18px, 1.75),
-  large : (20px,1.75),
+  large : (19px,1.75),
 );
 
-$h6-font-sizes: $p-font-sizes;
+$emph-font-sizes: (
+  null  : (36px, 1.3),
+  small : (40px),
+  medium: (48px),
+  large : (54px),
+);
 
 $small-font-sizes: (
   null  : (12px, 1.4),
@@ -73,3 +46,33 @@ $small-font-sizes: (
   medium: (15px, 1.6),
   large : (16px),
 );
+
+$h1-font-sizes: (
+  null  : (36px, 1.2),
+  small : (50px),
+  medium: (60px),
+  large : (72px),
+);
+
+$h2-font-sizes: (
+  null  : (28px, 1.1),
+  small : (30px),
+  medium: (38px),
+  large : (54px),
+);
+
+$h3-font-sizes: (
+  null  : (18px, 1),
+  small : (24px),
+  medium: (26px),
+  large : (28px),
+);
+
+$h5-font-sizes: $h3-font-sizes;
+
+$h6-font-sizes: $p-font-sizes;
+
+
+
+
+//$p-font-sizes: $small-font-sizes;
